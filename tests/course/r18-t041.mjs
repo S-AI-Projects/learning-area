@@ -63,7 +63,7 @@ try {
     name: "Below is a simple video example",
     level: 1,
   });
-  await assert.doesNotReject(() => heading.waitFor());
+  await heading.waitFor();
 
   const video = page.locator("video");
   await video.waitFor();
@@ -89,7 +89,23 @@ try {
 
   assert.ok(media.readyState >= 1, "Video metadata should load");
   assert.ok(Number.isFinite(media.duration), "Video duration should be known");
-  assert.ok(media.width > 0 && media.height > 0, "Video dimensions should be valid");
+  assert.ok(
+    media.width > 0 && media.height > 0,
+    "Video dimensions should be valid"
+  );
+
+  const positiveTabIndex = await page.locator("[tabindex]").evaluateAll(
+    (elements) =>
+      elements.filter(
+        (element) => Number(element.getAttribute("tabindex")) > 0
+      ).length
+  );
+
+  assert.equal(
+    positiveTabIndex,
+    0,
+    "Page should not use positive tabindex values"
+  );
 
   await page.keyboard.press("Tab");
 
@@ -104,28 +120,45 @@ try {
   assert.equal(focus.videoFocused, true, "Tab should reach the video");
   assert.equal(focus.focusVisible, true, "Keyboard focus should be visible");
 
- await page.keyboard.press("Space");
+  // Space starts playback.
+  await page.keyboard.press("Space");
 
   await page.waitForFunction(
-    () => document.querySelector("video").currentTime > 0,
+    () => {
+      const element = document.querySelector("video");
+      return !element.paused && element.currentTime > 0;
+    },
     { timeout: 5000 }
   );
 
-  const playback = await video.evaluate((element) => ({
-    paused: element.paused,
-    currentTime: element.currentTime,
-  }));
+  // Space pauses playback.
+  await page.keyboard.press("Space");
 
-  assert.equal(playback.paused, false, "Space should start video playback");
-  assert.ok(playback.currentTime > 0, "Video playback should advance");
-  assert.deepEqual(pageErrors, [], "Page should not produce JavaScript errors");
+  await page.waitForFunction(
+    () => document.querySelector("video").paused,
+    { timeout: 5000 }
+  );
+
+  assert.equal(
+    await video.evaluate((element) => element.paused),
+    true,
+    "Space should pause playback"
+  );
+
+  assert.deepEqual(
+    pageErrors,
+    [],
+    "Page should not produce JavaScript errors"
+  );
 
   console.log("PASS: Page and heading load");
   console.log("PASS: Native video controls are enabled");
   console.log("PASS: Video metadata and dimensions load", media);
+  console.log("PASS: No positive tabindex values");
   console.log("PASS: Tab reaches the video element");
   console.log("PASS: Keyboard focus is visible");
-  console.log("PASS: Space starts video playback", playback);
+  console.log("PASS: Space starts video playback");
+  console.log("PASS: Space pauses video playback");
   console.log("PASS: No unexpected page errors");
 } catch (error) {
   console.error("FAIL: R18-T041", error);
