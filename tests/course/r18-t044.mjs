@@ -13,10 +13,10 @@ const root = path.resolve(
 const targetPath =
   "/html/introduction-to-html/html-text-formatting/text-start.html";
 
-const expectedText = [
+const expectedBodyText = [
   "Quick hummus recipe",
-  "This recipe makes quick, tasty hummus, with no messing.",
-  "Hummus is a delicious thick paste used heavily in Greek and Middle Eastern dishes.",
+  "This recipe makes quick, tasty hummus, with no messing. It has been adapted from a number of different recipes that I have read over the years.",
+  "Hummus is a delicious thick paste used heavily in Greek and Middle Eastern dishes. It is very tasty with salad, grilled meats and pitta breads.",
   "Ingredients",
   "1 can (400g) of chick peas (garbanzo beans)",
   "175g of tahini",
@@ -32,10 +32,11 @@ const expectedText = [
   "Process all the ingredients into a paste.",
   'If you want a coarse "chunky" hummus, process it for a short time',
   "If you want a smooth hummus, process it for a longer time",
+  "For a different flavour, you could try blending in a small measure of lemon and coriander, chili pepper, lime and chipotle, harissa and mint, or spinach and feta cheese. Experiment and see what works for you.",
   "Storage",
-  "Refrigerate the finished hummus in a sealed container.",
-  "Hummus is suitable for freezing",
-];
+  "Refrigerate the finished hummus in a sealed container. You should be able to use it for about a week after you've made it. If it starts to become fizzy, you should definitely discard it.",
+  "Hummus is suitable for freezing; you should thaw it and use it within a couple of months.",
+].join(" ");
 
 async function startServer() {
   const server = createServer(async (req, res) => {
@@ -45,7 +46,7 @@ async function startServer() {
         "http://127.0.0.1",
       ).pathname;
 
-      const requestedPath = path.resolve(root, `.${pathname}`);
+      const requestedPath = path.resolve(root, "." + pathname);
 
       assert.ok(
         requestedPath.startsWith(root + path.sep),
@@ -73,7 +74,7 @@ async function startServer() {
 
   return {
     server,
-    baseURL: `http://127.0.0.1:${server.address().port}`,
+    baseURL: "http://127.0.0.1:" + server.address().port,
   };
 }
 
@@ -87,6 +88,7 @@ async function inspectFreshContext(browser, baseURL) {
   });
 
   const pageErrors = [];
+  const consoleErrors = [];
   const unexpectedRequests = [];
 
   try {
@@ -94,6 +96,12 @@ async function inspectFreshContext(browser, baseURL) {
 
     page.on("pageerror", (error) => {
       pageErrors.push(error.message);
+    });
+
+    page.on("console", (message) => {
+      if (message.type() === "error") {
+        consoleErrors.push(message.text());
+      }
     });
 
     await context.route("**/*", async (route) => {
@@ -108,7 +116,7 @@ async function inspectFreshContext(browser, baseURL) {
       await route.continue();
     });
 
-    const response = await page.goto(`${baseURL}${targetPath}`, {
+    const response = await page.goto(baseURL + targetPath, {
       waitUntil: "load",
     });
 
@@ -117,19 +125,37 @@ async function inspectFreshContext(browser, baseURL) {
 
     await page.locator("body").waitFor({ state: "visible" });
 
-    // Explicit local test fixture: no external fonts or assets.
+    // Capture the source page before adding any test-only styles.
+    const source = await page.evaluate(() => ({
+      title: document.title,
+      language: document.documentElement.lang,
+      bodyChildElementCount: document.body.children.length,
+      linkedStylesheets: document.querySelectorAll(
+        'link[rel="stylesheet"]',
+      ).length,
+      inlineStyleElements: document.querySelectorAll("style").length,
+      images: document.images.length,
+      scripts: document.scripts.length,
+      sourceStylesheetCount: document.styleSheets.length,
+    }));
+
+    // Explicit local typography fixture. The target has no images or
+    // external font assets, so no image fixture is required.
     await page.addStyleTag({
-      content: `
-        html, body {
-          font-family: monospace !important;
-          font-size: 16px !important;
-        }
-      `,
+      content: [
+        "html, body {",
+        "  font-family: monospace !important;",
+        "  font-size: 16px !important;",
+        "  line-height: 24px !important;",
+        "  margin: 0 !important;",
+        "}",
+      ].join("\n"),
     });
 
     const snapshot = await page.evaluate(() => {
       const body = document.body;
       const style = getComputedStyle(body);
+      const rect = body.getBoundingClientRect();
 
       return {
         title: document.title,
@@ -139,15 +165,28 @@ async function inspectFreshContext(browser, baseURL) {
           height: window.innerHeight,
         },
         bodyText: body.innerText.replace(/\s+/g, " ").trim(),
-        childElementCount: body.children.length,
+        bodyChildElementCount: body.children.length,
         fontFamily: style.fontFamily,
         fontSize: style.fontSize,
+        lineHeight: style.lineHeight,
         display: style.display,
+        marginTop: style.marginTop,
+        marginLeft: style.marginLeft,
+        bodyWidth: rect.width,
+        bodyLeft: rect.left,
         images: document.images.length,
         scripts: document.scripts.length,
-        stylesheets: document.styleSheets.length,
       };
     });
+
+    assert.equal(source.title, "Quick hummus recipe");
+    assert.equal(source.language, "en-US");
+    assert.equal(source.bodyChildElementCount, 0);
+    assert.equal(source.linkedStylesheets, 0);
+    assert.equal(source.inlineStyleElements, 0);
+    assert.equal(source.images, 0);
+    assert.equal(source.scripts, 0);
+    assert.equal(source.sourceStylesheetCount, 0);
 
     assert.equal(snapshot.title, "Quick hummus recipe");
     assert.equal(snapshot.language, "en-US");
@@ -155,49 +194,36 @@ async function inspectFreshContext(browser, baseURL) {
       width: 1280,
       height: 800,
     });
-
+    assert.equal(snapshot.bodyText, expectedBodyText);
+    assert.equal(snapshot.bodyChildElementCount, 0);
     assert.equal(snapshot.fontFamily, "monospace");
     assert.equal(snapshot.fontSize, "16px");
+    assert.equal(snapshot.lineHeight, "24px");
     assert.equal(snapshot.display, "block");
-
-    // The starter page intentionally contains plain text.
-    assert.equal(snapshot.childElementCount, 0);
+    assert.equal(snapshot.marginTop, "0px");
+    assert.equal(snapshot.marginLeft, "0px");
+    assert.equal(snapshot.bodyWidth, 1280);
+    assert.equal(snapshot.bodyLeft, 0);
     assert.equal(snapshot.images, 0);
     assert.equal(snapshot.scripts, 0);
-    assert.equal(snapshot.stylesheets, 1);
-
-    for (const text of expectedText) {
-      assert.ok(
-        snapshot.bodyText.includes(text),
-        `Missing expected recipe text: ${text}`,
-      );
-    }
-
-    assert.ok(
-      snapshot.bodyText.indexOf("Ingredients") <
-        snapshot.bodyText.indexOf("Instructions"),
-      "Ingredients must appear before Instructions",
-    );
-
-    assert.ok(
-      snapshot.bodyText.indexOf("Instructions") <
-        snapshot.bodyText.indexOf("Storage"),
-      "Instructions must appear before Storage",
-    );
 
     assert.deepEqual(
       unexpectedRequests,
       [],
       "Unexpected external network requests detected",
     );
-
     assert.deepEqual(
       pageErrors,
       [],
       "Unexpected JavaScript page errors detected",
     );
+    assert.deepEqual(
+      consoleErrors,
+      [],
+      "Unexpected browser console errors detected",
+    );
 
-    return snapshot;
+    return { source, snapshot };
   } finally {
     await context.close();
   }
@@ -222,14 +248,16 @@ async function main() {
       "Fresh browser contexts produced different results",
     );
 
-    console.log("PASS: Local server started successfully.");
-    console.log("PASS: Target page returned HTTP 200.");
-    console.log("PASS: Recipe text and ordering are correct.");
-    console.log("PASS: Original plain-text HTML structure is preserved.");
-    console.log("PASS: Fixed viewport and font fixture verified.");
-    console.log("PASS: No external network requests.");
-    console.log("PASS: No unexpected JavaScript page errors.");
-    console.log("PASS: Two fresh contexts produced identical results.");
+    console.log("PASS: Test-managed local server started and served HTTP 200.");
+    console.log("PASS: Original source has no linked styles, scripts, or images.");
+    console.log("PASS: Entire rendered recipe matches the expected baseline text.");
+    console.log("PASS: Original plain-text body structure is preserved.");
+    console.log("PASS: Fixed viewport and typography fixture are verified.");
+    console.log("PASS: Computed body layout matches the expected values.");
+    console.log("PASS: No external requests, page errors, or console errors.");
+    console.log("PASS: Two fresh contexts produced identical source and DOM snapshots.");
+    console.log("EXPECTED BODY TEXT: " + expectedBodyText);
+    console.log("ACTUAL SNAPSHOT: " + JSON.stringify(first));
   } finally {
     try {
       if (browser) await browser.close();
