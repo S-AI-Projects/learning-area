@@ -3,4 +3,4 @@ Canvas intrinsic dimensions equal viewport (960x640)
 Body overflow hidden; heading position absolute
 First animation frame draws 25 balls and schedules one next frame
 Second animation frame draws 25 additional balls and changes canvas pixels
-No uncaught page errors or failed requests
+No uncaught page errors, failed requests, or HTTP error responses

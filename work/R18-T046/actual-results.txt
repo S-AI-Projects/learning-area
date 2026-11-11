@@ -8,3 +8,4 @@ Second frame: 25 additional ball draws
 Canvas image changed between frames: yes
 Uncaught page errors: none
 Failed requests: none
+HTTP error responses: none

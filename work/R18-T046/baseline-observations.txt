@@ -1,0 +1,21 @@
+R18-T046 Baseline Observations
+
+Source commit:
+21973263ba859ff3477919087b488157f9d618a6
+
+Page:
+javascript/apis/introduction/bouncing-balls.html
+
+Baseline inspection:
+- The HTML page contains a canvas element.
+- The page loads style.css and main.js.
+- main.js obtains a Canvas 2D rendering context.
+- The canvas dimensions are set to the browser viewport.
+- The animation creates and draws 25 colored balls.
+- Balls move, bounce at canvas boundaries, and change color on collision.
+- style.css hides body overflow and positions the heading absolutely.
+
+Baseline conclusion:
+The original example already exhibited the intended behavior.
+No artificial source-code defect was introduced. The contribution adds
+browser regression coverage and precise run instructions.

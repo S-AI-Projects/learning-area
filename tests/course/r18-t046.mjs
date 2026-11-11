@@ -46,6 +46,7 @@ let browser;
 const actual = [];
 const pageErrors = [];
 const failedRequests = [];
+const badResponses = [];
 
 try {
   await new Promise((resolve, reject) => {
@@ -65,6 +66,11 @@ try {
 
   const page = await context.newPage();
   page.on("pageerror", (error) => pageErrors.push(error.message));
+  page.on("response", (response) => {
+    if (response.url().startsWith(baseUrl) && response.status() >= 400) {
+      badResponses.push(`${response.status()} ${response.url()}`);
+    }
+  });
   page.on("requestfailed", (request) => {
     failedRequests.push(`${request.url()}: ${request.failure()?.errorText}`);
   });
@@ -173,8 +179,10 @@ try {
 
   assert.deepEqual(pageErrors, [], "The page should not produce uncaught JavaScript errors");
   assert.deepEqual(failedRequests, [], "The page should not have failed network requests");
+  assert.deepEqual(badResponses, [], "Page resources should not return HTTP error responses");
   actual.push("Uncaught page errors: none");
   actual.push("Failed requests: none");
+  actual.push("HTTP error responses: none");
 
   await context.close();
 
@@ -192,7 +200,7 @@ try {
     "Body overflow hidden; heading position absolute",
     "First animation frame draws 25 balls and schedules one next frame",
     "Second animation frame draws 25 additional balls and changes canvas pixels",
-    "No uncaught page errors or failed requests",
+    "No uncaught page errors, failed requests, or HTTP error responses",
   ].join("\n");
 
   await writeFile(path.join(evidenceDir, "inputs.txt"), `${inputs}\n`);
