@@ -277,11 +277,11 @@ async function main() {
       JSON.stringify(first.snapshot, null, 2),
       "",
       "Fresh-context comparison: identical",
-    ].join("\\n");
+    ].join("\n");
 
     await writeFile(
       path.join(root, "work/R18-T044/actual-results.txt"),
-      evidence + "\\n",
+      evidence + "\n",
       "utf8",
     );
 
