@@ -1,0 +1,12 @@
+R18-T045 regression test results
+Date: 2026-11-11T16:49:33.993Z
+Node.js: v26.8.1
+Playwright: 1.65.0
+Browser: Chromium 158.0.8127.18
+
+PASS: Canvas 2D supported
+{"canvasPresent":true,"contextAvailable":true,"canvasWidth":1000,"canvasHeight":700,"viewportWidth":1000,"viewportHeight":700,"fallbackPresent":false,"headingPresent":true,"headingPosition":"absolute","bodyOverflow":"hidden"}
+PASS: Canvas 2D unsupported
+{"canvasRemoved":true,"fallbackPresent":true,"fallbackRole":"status","fallbackText":"Your browser does not support the Canvas 2D API. The bouncing balls example cannot run in this browser.","contextRequests":["2d"],"headingPresent":true}
+
+Total: 2 passed

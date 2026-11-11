@@ -1,0 +1,14 @@
+Task: R18-T045
+Target: javascript/oojs/bouncing-balls/
+
+Input 1: Chromium with native Canvas 2D support.
+Expected: Canvas remains visible, context is available, and dimensions match the viewport.
+
+Input 2: Chromium with getContext("2d") returning null.
+Expected: Canvas is replaced with an accessible status message. Heading remains visible.
+
+Both scenarios:
+Expected: No uncaught page errors. Browser contexts and local server are cleaned up.
+
+Interaction note:
+The original example has no interactive controls or event handlers, so event-effect assertions are not applicable.

@@ -1,0 +1,36 @@
+R18-T045 - BASELINE OBSERVATIONS
+
+Base commit: 21973263ba859ff3477919087b488157f9d618a6
+Target: javascript/oojs/bouncing-balls/
+
+Original HTML:
+- Contains an h1 heading and a canvas element.
+- Loads style.css and main.js.
+
+Original CSS:
+- Removes default page margins.
+- Makes the body fill the available height and hides overflow.
+- Positions the heading absolutely.
+
+Original JavaScript:
+- Selects the canvas element.
+- Requests a Canvas 2D rendering context.
+- Sets canvas width and height to the viewport dimensions.
+- Defines random() and randomRGB() helper functions.
+- Does not check whether getContext("2d") returned null.
+- Does not draw or animate balls at this teaching stage.
+
+Baseline supported behavior:
+The canvas remains present, receives viewport dimensions, and the helper
+functions are defined.
+
+Baseline unsupported behavior:
+The original code has no explicit fallback when the 2D context is null.
+
+Baseline scope:
+The page has no interactive controls or event handlers. Event-effect
+assertions are not applicable to this stage of the example.
+
+These baseline observations are based on inspection of the original source
+at the stated base commit. They are not claimed to be a separate
+pre-change browser execution.
