@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { createServer } from "node:http";
-import { readFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { chromium } from "playwright";
@@ -248,14 +248,45 @@ async function main() {
       "Fresh browser contexts produced different results",
     );
 
-    console.log("PASS: Test-managed local server started and served HTTP 200.");
-    console.log("PASS: Original source has no linked styles, scripts, or images.");
-    console.log("PASS: Entire rendered recipe matches the expected baseline text.");
-    console.log("PASS: Original plain-text body structure is preserved.");
-    console.log("PASS: Fixed viewport and typography fixture are verified.");
-    console.log("PASS: Computed body layout matches the expected values.");
-    console.log("PASS: No external requests, page errors, or console errors.");
-    console.log("PASS: Two fresh contexts produced identical source and DOM snapshots.");
+    const passMessages = [
+      "PASS: Test-managed local server started and served HTTP 200.",
+      "PASS: Original source has no linked styles, scripts, or images.",
+      "PASS: Entire rendered recipe matches the expected baseline text.",
+      "PASS: Original plain-text body structure is preserved.",
+      "PASS: Fixed viewport and typography fixture are verified.",
+      "PASS: Computed body layout matches the expected values.",
+      "PASS: No external requests, page errors, or console errors.",
+      "PASS: Two fresh contexts produced identical source and DOM snapshots.",
+    ];
+
+    const evidence = [
+      "R18-T044 browser regression — actual run evidence",
+      "Command: node tests/course/r18-t044.mjs",
+      "Result: PASS",
+      "Node.js: " + process.version,
+      "",
+      ...passMessages,
+      "",
+      "EXPECTED BASELINE BODY TEXT:",
+      expectedBodyText,
+      "",
+      "ACTUAL SOURCE INSPECTION:",
+      JSON.stringify(first.source, null, 2),
+      "",
+      "ACTUAL RENDERED DOM AND COMPUTED LAYOUT:",
+      JSON.stringify(first.snapshot, null, 2),
+      "",
+      "Fresh-context comparison: identical",
+    ].join("\\n");
+
+    await writeFile(
+      path.join(root, "work/R18-T044/actual-results.txt"),
+      evidence + "\\n",
+      "utf8",
+    );
+
+    for (const message of passMessages) console.log(message);
+    console.log("Evidence written to work/R18-T044/actual-results.txt");
     console.log("EXPECTED BODY TEXT: " + expectedBodyText);
     console.log("ACTUAL SNAPSHOT: " + JSON.stringify(first));
   } finally {
