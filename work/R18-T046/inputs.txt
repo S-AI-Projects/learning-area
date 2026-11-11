@@ -1,0 +1,5 @@
+Entry point: /javascript/apis/introduction/bouncing-balls.html
+Viewport: 960x640
+Browser context: fresh, headless Chromium
+Randomness: seeded in the test before page scripts execute
+Animation frames: manually advanced by the test

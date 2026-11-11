@@ -1,0 +1,11 @@
+HTTP response: 200
+Document title and heading: correct
+Canvas layout: 960x640
+Body overflow: hidden
+Heading position: absolute
+Initial frame: 25 balls drawn
+Second frame: 25 additional ball draws
+Canvas image changed between frames: yes
+Uncaught page errors: none
+Failed requests: none
+HTTP error responses: none
