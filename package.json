@@ -1,0 +1,25 @@
+{
+  "name": "learning-area-task5",
+  "version": "1.0.0",
+  "description": "Welcome to the GitHub repository for the [MDN Learning Area](https://developer.mozilla.org/en-US/Learn).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:r18-t045": "node tests/course/r18-t045.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nishantekka2007-sys/learning-area.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/nishantekka2007-sys/learning-area/issues"
+  },
+  "homepage": "https://github.com/nishantekka2007-sys/learning-area#readme",
+  "devDependencies": {
+    "playwright": "^1.65.0"
+  }
+}
