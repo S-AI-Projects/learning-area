@@ -193,8 +193,8 @@ async function main() {
       "R18-T045 regression test results",
       `Date: ${new Date().toISOString()}`,
       `Node.js: ${process.version}`,
-      `Playwright: ${process.env.npm_package_devDependencies_playwright || "See npm list playwright"}`,
-      `Browser: Chromium`,
+      `Playwright: ${JSON.parse(await readFile(resolve(root, "node_modules/playwright/package.json"), "utf8")).version}`,
+      `Browser: Chromium ${browser.version()}`,
       "",
       ...results.map(
         (result) => `${result.status}: ${result.name}\n${result.details}`
@@ -213,12 +213,14 @@ async function main() {
     console.error("\nRegression test failed:", error);
     process.exitCode = 1;
   } finally {
-    if (browser) await browser.close();
-
-    if (server.listening) {
-      await new Promise((resolve, reject) => {
-        server.close((error) => (error ? reject(error) : resolve()));
-      });
+    try {
+      if (browser) await browser.close();
+    } finally {
+      if (server.listening) {
+        await new Promise((resolve, reject) => {
+          server.close((error) => (error ? reject(error) : resolve()));
+        });
+      }
     }
   }
 }
