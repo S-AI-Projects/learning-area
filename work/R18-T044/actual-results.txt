@@ -1,12 +1,15 @@
+R18-T044 evidence refresh required.
 
-> test:course:r18-t044
-> node tests/course/r18-t044.mjs
+The original captured output predates the strengthened full-text, source-inspection,
+computed-layout, and expected-versus-actual assertions. Do not treat that earlier
+output as evidence for the current test.
 
-PASS: Local server started successfully.
-PASS: Target page returned HTTP 200.
-PASS: Recipe text and ordering are correct.
-PASS: Original plain-text HTML structure is preserved.
-PASS: Fixed viewport and font fixture verified.
-PASS: No external network requests.
-PASS: No unexpected JavaScript page errors.
-PASS: Two fresh contexts produced identical results.
+Run from the repository root:
+
+  npm install
+  npx playwright install chromium
+  node tests/course/r18-t044.mjs
+
+A successful run automatically replaces this file with the current expected
+baseline text, actual source inspection, actual DOM/layout snapshot, PASS
+results, and Node.js version. The test exits non-zero if an assertion fails.
