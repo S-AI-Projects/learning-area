@@ -1,0 +1,12 @@
+
+> test:course:r18-t044
+> node tests/course/r18-t044.mjs
+
+PASS: Local server started successfully.
+PASS: Target page returned HTTP 200.
+PASS: Recipe text and ordering are correct.
+PASS: Original plain-text HTML structure is preserved.
+PASS: Fixed viewport and font fixture verified.
+PASS: No external network requests.
+PASS: No unexpected JavaScript page errors.
+PASS: Two fresh contexts produced identical results.
