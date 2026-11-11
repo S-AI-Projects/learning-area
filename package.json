@@ -1,0 +1,16 @@
+{
+  "name": "mdn-learning-area-r18-t043",
+  "version": "1.0.0",
+  "description": "Playwright regression test for the JavaScript functions conflict example",
+  "scripts": {
+    "test": "node --test tests/course/r18-t043.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "playwright": "^1.65.0"
+  },
+  "private": true
+}
