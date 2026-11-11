@@ -29,5 +29,8 @@ no images or external font assets, so no image fixture or public API is
 needed. External requests are blocked, and page and console errors fail the
 test.
 
-The test prints the expected baseline text and the actual DOM/layout snapshot
-so the run can be compared and recorded in `work/R18-T044/actual-results.txt`.
+The test prints the expected baseline text and actual DOM/layout snapshot. On
+every successful run, it also regenerates `work/R18-T044/actual-results.txt`
+with the expected text, actual source inspection, actual rendered values, and
+Node.js version. The committed evidence file must be refreshed by running the
+command above after changing the test.
