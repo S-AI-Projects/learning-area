@@ -1,0 +1,34 @@
+{
+  "task": "R18-T042",
+  "page": "/responsive.html",
+  "result": "PASS",
+  "node": "v26.8.1",
+  "playwright": "1.65.0",
+  "browser": "Chromium (Playwright)",
+  "checks": [
+    "Both original content images load",
+    "Meaningful alt text is present",
+    "Mobile picture source selected below 800px",
+    "Desktop picture source selected at 1000px",
+    "Responsive srcset asset selected",
+    "Images remain within viewport and use block/max-width layout",
+    "Missing-image fixture returns HTTP 404",
+    "Alt text remains available after image failure",
+    "Restoring original sources recovers the image",
+    "Flickr image-credit link remains intact",
+    "No uncaught page errors"
+  ],
+  "failure_fixture": {
+    "path": "/__fixtures__/r18-t042-missing-image.jpg",
+    "expected_status": 404,
+    "observed_status": 404,
+    "observed_natural_width": 0,
+    "observed_alt": "Chris standing up holding his daughter Elva"
+  },
+  "screenshots": [
+    "screenshots/mobile-baseline.png",
+    "screenshots/desktop-baseline.png",
+    "screenshots/missing-image-fallback.png",
+    "screenshots/image-recovered.png"
+  ]
+}
