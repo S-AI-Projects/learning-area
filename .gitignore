@@ -1,1 +1,4 @@
 *.DS_Store
+
+# Local Node.js dependencies
+node_modules/
