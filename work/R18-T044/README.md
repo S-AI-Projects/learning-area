@@ -49,7 +49,11 @@ intentionally left unchanged.
 
 ## Actual results
 
-See `actual-results.txt` for the captured test output.
+`actual-results.txt` is regenerated automatically after the strengthened
+browser test completes successfully. The committed file currently marks the
+refresh as pending because the expanded assertions were added after the
+previous captured run. Run the command below to create the current
+expected-versus-actual evidence.
 
 ## Changed behavior
 
