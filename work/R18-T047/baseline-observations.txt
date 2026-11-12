@@ -1,0 +1,13 @@
+Task: R18-T047
+Target: javascript/asynchronous/workers/start/index.html
+
+Baseline observations:
+- HTTP response: 200
+- Document title: Number of primes
+- #quota, #generate, #reload, #user-input, and #output are present.
+- The quota label is associated with #quota.
+- The textarea uses display: block.
+- The starter main.js and generate.js files are empty.
+- No image element is present in the initial page.
+- No browser page errors, failed requests, or HTTP errors were observed.
+- The original starter HTML, JavaScript, and CSS are preserved.

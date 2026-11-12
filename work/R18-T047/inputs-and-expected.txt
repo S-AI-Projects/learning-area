@@ -1,0 +1,13 @@
+Task: R18-T047
+
+Test input:
+<img src=x onerror="window.__r18T047HandlerExecuted=true">
+
+Expected results:
+1. The exact input remains in the #user-input textarea value.
+2. No img element is created from the input.
+3. The injected onerror handler does not execute.
+4. The #output container remains empty.
+5. The page returns HTTP 200.
+6. No unexpected browser page errors, failed requests, or HTTP errors occur.
+7. The test exits non-zero if an assertion fails.
