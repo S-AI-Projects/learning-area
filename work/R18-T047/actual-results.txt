@@ -1,0 +1,15 @@
+Task: R18-T047
+Result: PASS
+Command: node tests/course/r18-t047.mjs
+
+Observed:
+- Page response: HTTP 200.
+- Exact malicious-looking input remained in the textarea.
+- Injected image element count: 0.
+- Injected handler executed: false.
+- Output container text: empty.
+- No browser page errors.
+- No failed requests.
+- No HTTP error responses.
+- Screenshot: after-input.png
+- Test exit code: 0.
