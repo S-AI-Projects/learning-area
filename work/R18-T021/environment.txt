@@ -1,0 +1,7 @@
+R18-T021 Environment
+Date: Thu Nov 12 12:28:29 IST 2026
+Node.js: v26.10.0
+npm: 11.19.1
+Playwright: Version 1.65.0
+Chromium:
+158.0.8127.18
