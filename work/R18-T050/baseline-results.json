@@ -1,0 +1,145 @@
+{
+  "node": "v26.8.1",
+  "playwright": "1.65.0",
+  "browser": "Chromium",
+  "results": [
+    {
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "baseline": {
+        "title": "Radio buttons styled",
+        "heading": "Choose your favourite fruit",
+        "contentOrder": [
+          "Cherry",
+          "Banana",
+          "Strawberry"
+        ],
+        "radioCount": 3,
+        "radioValues": [
+          "cherry",
+          "banana",
+          "strawberry"
+        ],
+        "viewportWidth": 360,
+        "documentWidth": 360,
+        "bodyWidth": 344,
+        "form": {
+          "x": 8,
+          "right": 352,
+          "width": 344
+        },
+        "fieldset": {
+          "x": 10,
+          "right": 350,
+          "width": 340
+        },
+        "radios": [
+          {
+            "value": "cherry",
+            "x": 29,
+            "right": 49,
+            "width": 20,
+            "height": 20,
+            "visible": true,
+            "appearance": "none"
+          },
+          {
+            "value": "banana",
+            "x": 29,
+            "right": 49,
+            "width": 20,
+            "height": 20,
+            "visible": true,
+            "appearance": "none"
+          },
+          {
+            "value": "strawberry",
+            "x": 29,
+            "right": 49,
+            "width": 20,
+            "height": 20,
+            "visible": true,
+            "appearance": "none"
+          }
+        ]
+      },
+      "interaction": {
+        "cherryChecked": true,
+        "bananaChecked": true,
+        "cherryUnchecked": true
+      },
+      "pageErrors": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "baseline": {
+        "title": "Radio buttons styled",
+        "heading": "Choose your favourite fruit",
+        "contentOrder": [
+          "Cherry",
+          "Banana",
+          "Strawberry"
+        ],
+        "radioCount": 3,
+        "radioValues": [
+          "cherry",
+          "banana",
+          "strawberry"
+        ],
+        "viewportWidth": 1280,
+        "documentWidth": 1280,
+        "bodyWidth": 1264,
+        "form": {
+          "x": 8,
+          "right": 1272,
+          "width": 1264
+        },
+        "fieldset": {
+          "x": 10,
+          "right": 1270,
+          "width": 1260
+        },
+        "radios": [
+          {
+            "value": "cherry",
+            "x": 29,
+            "right": 49,
+            "width": 20,
+            "height": 20,
+            "visible": true,
+            "appearance": "none"
+          },
+          {
+            "value": "banana",
+            "x": 29,
+            "right": 49,
+            "width": 20,
+            "height": 20,
+            "visible": true,
+            "appearance": "none"
+          },
+          {
+            "value": "strawberry",
+            "x": 29,
+            "right": 49,
+            "width": 20,
+            "height": 20,
+            "visible": true,
+            "appearance": "none"
+          }
+        ]
+      },
+      "interaction": {
+        "cherryChecked": true,
+        "bananaChecked": true,
+        "cherryUnchecked": true
+      },
+      "pageErrors": []
+    }
+  ]
+}

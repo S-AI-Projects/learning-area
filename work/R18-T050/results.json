@@ -1,0 +1,189 @@
+{
+  "task": "R18-T050",
+  "node": "v26.8.1",
+  "playwright": "1.65.0",
+  "chromium": "158.0.8127.18",
+  "server": "Node.js HTTP static lesson server",
+  "source": "html/forms/custom-radio-styles/index.html",
+  "results": [
+    {
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "layout": {
+        "title": "Radio buttons styled",
+        "heading": "Choose your favourite fruit",
+        "order": [
+          "Cherry",
+          "Banana",
+          "Strawberry"
+        ],
+        "values": [
+          "cherry",
+          "banana",
+          "strawberry"
+        ],
+        "viewportWidth": 360,
+        "documentWidth": 360,
+        "bodyWidth": 344,
+        "form": {
+          "x": 8,
+          "y": 8,
+          "right": 352,
+          "bottom": 182.59375,
+          "width": 344,
+          "height": 174.59375
+        },
+        "fieldset": {
+          "x": 10,
+          "y": 8,
+          "right": 350,
+          "bottom": 182.59375,
+          "width": 340,
+          "height": 174.59375
+        },
+        "radios": [
+          {
+            "value": "cherry",
+            "rect": {
+              "x": 29,
+              "y": 50.59375,
+              "right": 49,
+              "bottom": 70.59375,
+              "width": 20,
+              "height": 20
+            },
+            "appearance": "none",
+            "borderRadius": "10px"
+          },
+          {
+            "value": "banana",
+            "rect": {
+              "x": 29,
+              "y": 91.59375,
+              "right": 49,
+              "bottom": 111.59375,
+              "width": 20,
+              "height": 20
+            },
+            "appearance": "none",
+            "borderRadius": "10px"
+          },
+          {
+            "value": "strawberry",
+            "rect": {
+              "x": 29,
+              "y": 132.59375,
+              "right": 49,
+              "bottom": 152.59375,
+              "width": 20,
+              "height": 20
+            },
+            "appearance": "none",
+            "borderRadius": "10px"
+          }
+        ]
+      },
+      "interactions": {
+        "mouseSelection": "PASS",
+        "exclusiveSelection": "PASS",
+        "keyboardArrowRight": "PASS",
+        "checkedIndicatorScale": 1
+      },
+      "browserErrors": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "layout": {
+        "title": "Radio buttons styled",
+        "heading": "Choose your favourite fruit",
+        "order": [
+          "Cherry",
+          "Banana",
+          "Strawberry"
+        ],
+        "values": [
+          "cherry",
+          "banana",
+          "strawberry"
+        ],
+        "viewportWidth": 1280,
+        "documentWidth": 1280,
+        "bodyWidth": 1264,
+        "form": {
+          "x": 8,
+          "y": 8,
+          "right": 1272,
+          "bottom": 182.59375,
+          "width": 1264,
+          "height": 174.59375
+        },
+        "fieldset": {
+          "x": 10,
+          "y": 8,
+          "right": 1270,
+          "bottom": 182.59375,
+          "width": 1260,
+          "height": 174.59375
+        },
+        "radios": [
+          {
+            "value": "cherry",
+            "rect": {
+              "x": 29,
+              "y": 50.59375,
+              "right": 49,
+              "bottom": 70.59375,
+              "width": 20,
+              "height": 20
+            },
+            "appearance": "none",
+            "borderRadius": "10px"
+          },
+          {
+            "value": "banana",
+            "rect": {
+              "x": 29,
+              "y": 91.59375,
+              "right": 49,
+              "bottom": 111.59375,
+              "width": 20,
+              "height": 20
+            },
+            "appearance": "none",
+            "borderRadius": "10px"
+          },
+          {
+            "value": "strawberry",
+            "rect": {
+              "x": 29,
+              "y": 132.59375,
+              "right": 49,
+              "bottom": 152.59375,
+              "width": 20,
+              "height": 20
+            },
+            "appearance": "none",
+            "borderRadius": "10px"
+          }
+        ]
+      },
+      "interactions": {
+        "mouseSelection": "PASS",
+        "exclusiveSelection": "PASS",
+        "keyboardArrowRight": "PASS",
+        "checkedIndicatorScale": 1
+      },
+      "browserErrors": []
+    }
+  ],
+  "mutationTest": {
+    "expected": "Horizontal overflow detected",
+    "actual": "Horizontal overflow: document is 1038px wide in a 360px viewport",
+    "result": "PASS"
+  }
+}

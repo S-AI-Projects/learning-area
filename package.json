@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "playwright": "1.65.0"
+  },
+  "scripts": {
+    "test:r18-t050": "node tests/course/r18-t050.mjs"
+  }
+}
