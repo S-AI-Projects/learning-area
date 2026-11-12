@@ -1,0 +1,20 @@
+{
+  "task": "R18-T049",
+  "target": "javascript/oojs/introduction/oojs.html",
+  "node": "v26.8.1",
+  "playwright": "1.65.0",
+  "baseline": {
+    "passed": true,
+    "result": {
+      "href": "https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools",
+      "display": "inline",
+      "visibility": "visible",
+      "pointerEvents": "auto"
+    }
+  },
+  "mutation": {
+    "correctlyDetected": true,
+    "failure": "Documentation link must retain its destination\n\u001b[32m+ actual\u001b[39m \u001b[31m- expected\u001b[39m\n\n\u001b[32m+\u001b[39m null\n\u001b[31m- \u001b[39m'https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools'\n"
+  },
+  "originalLessonModified": false
+}
