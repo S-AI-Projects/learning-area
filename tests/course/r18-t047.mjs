@@ -1,11 +1,26 @@
 import assert from 'node:assert/strict';
 import { spawn } from 'node:child_process';
 import { setTimeout as delay } from 'node:timers/promises';
+import { createServer } from 'node:net';
 import { chromium } from 'playwright';
 
 const ROOT = process.cwd();
-const PORT = 4177;
-const URL = `http://127.0.0.1:${PORT}/javascript/asynchronous/workers/start/index.html`;
+let PORT;
+let URL;
+
+async function getAvailablePort() {
+  const probe = createServer();
+  await new Promise((resolve, reject) => {
+    probe.once('error', reject);
+    probe.listen(0, '127.0.0.1', resolve);
+  });
+  const address = probe.address();
+  const port = address.port;
+  await new Promise((resolve, reject) => {
+    probe.close(error => error ? reject(error) : resolve());
+  });
+  return port;
+}
 
 let server;
 let browser;
@@ -30,6 +45,9 @@ async function waitForServer() {
 }
 
 try {
+  PORT = await getAvailablePort();
+  URL = `http://127.0.0.1:${PORT}/javascript/asynchronous/workers/start/index.html`;
+
   server = spawn('python3', [
     '-m', 'http.server', String(PORT),
     '--bind', '127.0.0.1',
