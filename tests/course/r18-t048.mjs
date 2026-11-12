@@ -12,13 +12,6 @@ const exampleDir = path.join(root, "javascript/building-blocks/functions");
 const evidenceDir = path.join(root, "work/R18-T048");
 const expectedIntentionalError = "Identifier 'name' has already been declared";
 const expectedDialog = "Hello Chris: welcome to our company.";
-const chromiumPath =
-  process.env.CHROMIUM_PATH ||
-  path.join(
-    process.env.HOME,
-    "Library/Caches/ms-playwright/chromium-1254/chrome-mac-arm64",
-    "Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing"
-  );
 
 async function availablePort() {
   const server = createServer();
@@ -72,7 +65,9 @@ try {
 
   browser = await chromium.launch({
     headless: true,
-    executablePath: chromiumPath
+    ...(process.env.CHROMIUM_PATH
+      ? { executablePath: process.env.CHROMIUM_PATH }
+      : {})
   });
 
   const results = [];
