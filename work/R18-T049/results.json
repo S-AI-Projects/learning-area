@@ -1,20 +1,47 @@
 {
   "task": "R18-T049",
   "target": "javascript/oojs/introduction/oojs.html",
-  "node": "v26.8.1",
-  "playwright": "1.65.0",
+  "timestamp": "2026-11-12T06:24:34.286Z",
+  "tools": {
+    "node": "v26.8.1",
+    "npm": "11.19.0",
+    "playwright": "1.65.0",
+    "chromium": "158.0.8127.18"
+  },
   "baseline": {
     "passed": true,
-    "result": {
+    "expected": {
+      "paragraphVisible": true,
+      "linkVisible": true,
       "href": "https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools",
       "display": "inline",
       "visibility": "visible",
-      "pointerEvents": "auto"
+      "pointerEvents": "auto",
+      "navigationWorks": true
+    },
+    "actual": {
+      "href": "https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools",
+      "display": "inline",
+      "visibility": "visible",
+      "pointerEvents": "auto",
+      "clicked": true,
+      "navigationIntercepted": true,
+      "finalUrl": "https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools"
     }
   },
   "mutation": {
-    "correctlyDetected": true,
-    "failure": "Documentation link must retain its destination\n\u001b[32m+ actual\u001b[39m \u001b[31m- expected\u001b[39m\n\n\u001b[32m+\u001b[39m null\n\u001b[31m- \u001b[39m'https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools'\n"
+    "fixture": "Temporary CSS mutation",
+    "input": "<style>\n  a {\n    pointer-events: none;\n  }\n</style>",
+    "expected": {
+      "pointerEvents": "auto",
+      "testResult": "FAIL"
+    },
+    "actual": {
+      "pointerEvents": "none",
+      "testResult": "FAIL",
+      "assertionMessage": "Documentation link must receive pointer events"
+    },
+    "correctlyDetected": true
   },
   "originalLessonModified": false
 }
