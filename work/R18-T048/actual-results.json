@@ -1,0 +1,146 @@
+{
+  "outcome": "PASS",
+  "browser": "158.0.8127.18",
+  "results": [
+    {
+      "width": 375,
+      "reducedMotion": false,
+      "httpStatus": 200,
+      "title": "Conflict example",
+      "text": "My body",
+      "paragraphCount": 1,
+      "tabIndex": "0",
+      "focused": true,
+      "focusVisible": true,
+      "outlineStyle": "solid",
+      "outlineWidth": "3px",
+      "outlineOffset": "3px",
+      "display": "block",
+      "visibility": "visible",
+      "animationName": "none",
+      "animationCount": 0,
+      "bounds": {
+        "x": 8,
+        "y": 16,
+        "width": 359,
+        "height": 18
+      },
+      "documentWidth": 375,
+      "viewportWidth": 375,
+      "pageErrors": [
+        "Identifier 'name' has already been declared"
+      ],
+      "dialogs": [
+        "Hello Chris: welcome to our company."
+      ],
+      "failedRequests": [],
+      "badResponses": [],
+      "screenshot": "after-375-no-preference.png"
+    },
+    {
+      "width": 375,
+      "reducedMotion": true,
+      "httpStatus": 200,
+      "title": "Conflict example",
+      "text": "My body",
+      "paragraphCount": 1,
+      "tabIndex": "0",
+      "focused": true,
+      "focusVisible": true,
+      "outlineStyle": "solid",
+      "outlineWidth": "3px",
+      "outlineOffset": "3px",
+      "display": "block",
+      "visibility": "visible",
+      "animationName": "none",
+      "animationCount": 0,
+      "bounds": {
+        "x": 8,
+        "y": 16,
+        "width": 359,
+        "height": 18
+      },
+      "documentWidth": 375,
+      "viewportWidth": 375,
+      "pageErrors": [
+        "Identifier 'name' has already been declared"
+      ],
+      "dialogs": [
+        "Hello Chris: welcome to our company."
+      ],
+      "failedRequests": [],
+      "badResponses": [],
+      "screenshot": "after-375-reduce.png"
+    },
+    {
+      "width": 1280,
+      "reducedMotion": false,
+      "httpStatus": 200,
+      "title": "Conflict example",
+      "text": "My body",
+      "paragraphCount": 1,
+      "tabIndex": "0",
+      "focused": true,
+      "focusVisible": true,
+      "outlineStyle": "solid",
+      "outlineWidth": "3px",
+      "outlineOffset": "3px",
+      "display": "block",
+      "visibility": "visible",
+      "animationName": "none",
+      "animationCount": 0,
+      "bounds": {
+        "x": 8,
+        "y": 16,
+        "width": 1264,
+        "height": 18
+      },
+      "documentWidth": 1280,
+      "viewportWidth": 1280,
+      "pageErrors": [
+        "Identifier 'name' has already been declared"
+      ],
+      "dialogs": [
+        "Hello Chris: welcome to our company."
+      ],
+      "failedRequests": [],
+      "badResponses": [],
+      "screenshot": "after-1280-no-preference.png"
+    },
+    {
+      "width": 1280,
+      "reducedMotion": true,
+      "httpStatus": 200,
+      "title": "Conflict example",
+      "text": "My body",
+      "paragraphCount": 1,
+      "tabIndex": "0",
+      "focused": true,
+      "focusVisible": true,
+      "outlineStyle": "solid",
+      "outlineWidth": "3px",
+      "outlineOffset": "3px",
+      "display": "block",
+      "visibility": "visible",
+      "animationName": "none",
+      "animationCount": 0,
+      "bounds": {
+        "x": 8,
+        "y": 16,
+        "width": 1264,
+        "height": 18
+      },
+      "documentWidth": 1280,
+      "viewportWidth": 1280,
+      "pageErrors": [
+        "Identifier 'name' has already been declared"
+      ],
+      "dialogs": [
+        "Hello Chris: welcome to our company."
+      ],
+      "failedRequests": [],
+      "badResponses": [],
+      "screenshot": "after-1280-reduce.png"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+R18-T048 baseline observations
+Date: 2026-11-12
+Target: javascript/building-blocks/functions/conflict.html
+Viewport widths: 375px and 1280px
+Motion settings: no-preference and reduce
+
+Original content: one paragraph, "My body".
+Original paragraph: not keyboard-focusable; no tabindex.
+After pressing Tab: document.activeElement remained BODY.
+Computed paragraph display: block.
+Computed paragraph visibility: visible.
+Computed paragraph animation-name: none.
+Reduced-motion preference did not change the static content.
+Intentional page error: Identifier 'name' has already been declared.
+Native alert: Hello Chris: welcome to our company.
+HTTP response: 200.
+Original source checksums:
+conflict.html 0e1aac0c7bb42554d88e2f4e0c7196d610f3a20e3cee630f521033c33605dfce
+first.js 0f753d2d51cbf9a10d87a7a0da1be727587f19e4ee2df4d6684aad3ba7609c4c
+second.js 9c331fe4cb81d1af9aba339d1823ac6d60ab4903ed0892464f2a4894be8b59c6

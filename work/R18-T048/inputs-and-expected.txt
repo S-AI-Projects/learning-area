@@ -1,0 +1,19 @@
+R18-T048 browser regression inputs and expectations
+
+Viewports: 375x800 and 1280x800.
+Reduced-motion contexts: no-preference and reduce.
+Keyboard input: Tab from a fresh page context.
+
+Expected:
+- HTTP 200 and title "Conflict example".
+- One visible paragraph containing "My body".
+- Paragraph has tabindex="0".
+- Tab moves focus to the paragraph.
+- :focus-visible matches and computed outline is solid, 3px, offset 3px.
+- Content fits the viewport at both widths.
+- No CSS animation or Web Animations API animation is present.
+- Reduced-motion preference is correctly emulated and leaves content usable.
+- The known duplicate-const SyntaxError occurs exactly once.
+- The first script's known alert occurs exactly once and is accepted by the test.
+- No failed requests or HTTP error responses.
+- Unexpected page errors fail the test.
