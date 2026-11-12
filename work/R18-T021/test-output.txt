@@ -1,0 +1,7 @@
+PASS: R18-T021 keyboard accessibility
+PASS: Tab navigation
+PASS: Visible focus
+PASS: Enter activation
+PASS: Main content focus
+PASS: No positive tabindex
+PASS: No unexpected browser errors
