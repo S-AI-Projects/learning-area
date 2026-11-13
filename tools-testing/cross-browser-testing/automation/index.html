@@ -10,6 +10,16 @@
   <body>
     <!-- Intentionally empty paragraph to demonstrate element removal by a markup corrector -->
     <p></p>
+    <section id="text-rendering-example" aria-labelledby="text-rendering-heading">
+      <h2 id="text-rendering-heading">Safe text rendering</h2>
+      <p>Enter text to display it literally, without interpreting it as HTML.</p>
+      <form id="text-rendering-form">
+        <label for="user-text">Text to render</label>
+        <input id="user-text" name="user-text" type="text">
+        <button type="submit">Render text</button>
+      </form>
+      <output id="text-output" for="user-text" aria-live="polite"></output>
+    </section>
     <script src="main.js"></script>
   </body>
 </html>
