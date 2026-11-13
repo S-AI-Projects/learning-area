@@ -1,8 +1,35 @@
 body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+
+main {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.flow-diagram {
+  max-width: 30rem;
+  margin: 1.5rem auto;
+  text-align: center;
+}
+
+.flow-diagram img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#diagram-fallback {
+  color: #8a1c1c;
+}
+
+.results {
   display: flex;
 }
 
-body > p {
+.results > p {
   flex: 1;
   text-align: center;
 }
