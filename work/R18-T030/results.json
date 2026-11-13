@@ -1,0 +1,131 @@
+{
+  "task": "R18-T030",
+  "target": "/accessibility/multimedia/audio-transcript-ui/",
+  "startedAt": "2026-11-13T14:13:04.426Z",
+  "tools": {
+    "node": "v26.10.0",
+    "playwright": "1.65.0",
+    "python": "Python 3.15.2",
+    "chromium": "158.0.8127.18"
+  },
+  "expected": {
+    "transcript": {
+      "initial": {
+        "label": "Show transcript",
+        "height": "0px"
+      },
+      "open": {
+        "label": "Hide transcript",
+        "height": "150px"
+      },
+      "closed": {
+        "label": "Show transcript",
+        "height": "0px"
+      }
+    },
+    "audio": {
+      "sources": [
+        "../viper.mp3",
+        "../viper.ogg"
+      ],
+      "controls": [
+        "Play",
+        "Stop",
+        "Rwd",
+        "Fwd"
+      ],
+      "playPauseLabels": [
+        "Pause",
+        "Play"
+      ],
+      "stop": {
+        "currentTime": 0,
+        "paused": true,
+        "label": "Play"
+      }
+    },
+    "mutation": {
+      "assertion": "transcript button switches to Hide transcript",
+      "expectedToFail": true
+    },
+    "pageErrors": []
+  },
+  "server": {
+    "command": "python3 -m http.server",
+    "host": "127.0.0.1",
+    "port": 59265,
+    "readiness": "HTTP 200"
+  },
+  "correctBehavior": {
+    "initial": {
+      "title": "Audio transcript example",
+      "audio": {
+        "present": true,
+        "nativeControls": false,
+        "sources": [
+          "../viper.mp3",
+          "../viper.ogg"
+        ],
+        "fallbackLink": "../viper.mp3"
+      },
+      "customButtons": [
+        "Play",
+        "Stop",
+        "Rwd",
+        "Fwd"
+      ],
+      "transcript": {
+        "label": "Show transcript",
+        "height": "0px",
+        "width": "478px",
+        "containerWidth": "480px",
+        "textLength": 1310
+      }
+    },
+    "media": {
+      "playing": {
+        "label": "Pause",
+        "paused": false
+      },
+      "paused": {
+        "label": "Play",
+        "paused": true
+      },
+      "forwardWhilePaused": 0,
+      "forwarded": 3,
+      "rewound": 0,
+      "displayedTime": "00:14",
+      "stopped": {
+        "currentTime": 0,
+        "paused": true,
+        "label": "Play"
+      },
+      "minuteDisplay": "01:05"
+    },
+    "transcript": {
+      "opened": {
+        "label": "Hide transcript",
+        "height": "150px",
+        "clientHeight": 150,
+        "scrollHeight": 528
+      },
+      "closed": {
+        "label": "Show transcript",
+        "height": "0px"
+      }
+    },
+    "pageErrors": []
+  },
+  "mutatedFixture": {
+    "mutation": "Replaced only the transcript button event binding with null in the served main.js fixture.",
+    "expected": "AssertionError: transcript button switches to Hide transcript",
+    "actual": {
+      "label": "Show transcript",
+      "height": "0px",
+      "failure": "transcript button switches to Hide transcript"
+    },
+    "pageErrors": []
+  },
+  "finishedAt": "2026-11-13T14:13:05.284Z",
+  "status": "passed"
+}

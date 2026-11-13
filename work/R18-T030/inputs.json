@@ -1,0 +1,29 @@
+{
+  "target": "accessibility/multimedia/audio-transcript-ui/index.html",
+  "baseline": {
+    "capturedBeforeChanges": true,
+    "observations": {
+      "nativeAudioControlsAfterScript": false,
+      "customControls": ["Play", "Stop", "Rwd", "Fwd"],
+      "transcriptInitialButton": "Show transcript",
+      "transcriptInitialComputedHeight": "0px",
+      "transcriptExpandedButton": "Hide transcript",
+      "transcriptExpandedComputedHeight": "150px",
+      "transcriptCollapsedButton": "Show transcript",
+      "transcriptCollapsedComputedHeight": "0px"
+    }
+  },
+  "assertions": [
+    "Audio and both source formats render; the fallback link references the MP3.",
+    "Custom Play/Pause, Stop, Rwd, Fwd, and time display respond to media events.",
+    "Transcript button state and computed height change on open and close; expanded content scrolls.",
+    "No uncaught page errors occur in the correct page or mutated fixture."
+  ],
+  "mediaStub": "The HTMLMediaElement paused, duration, currentTime, play(), and pause() are stubbed to avoid codec/device variability.",
+  "mutation": {
+    "scope": "Playwright-served fixture only; application source is not modified.",
+    "change": "Replace transcriptBtn.onclick function binding with null.",
+    "expected": "The strict assertion that the button changes to Hide transcript fails because the button remains Show transcript and the transcript remains at 0px."
+  },
+  "server": "The test launches python3 -m http.server on loopback using an ephemeral port and terminates it during cleanup."
+}
