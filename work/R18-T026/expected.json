@@ -1,0 +1,28 @@
+{
+  "supported": {
+    "heading": "bouncing balls",
+    "ballCount": 25,
+    "canvasSize": {
+      "width": 960,
+      "height": 720
+    },
+    "initialFrame": {
+      "fillRectCalls": 1,
+      "filledBallArcs": 25,
+      "strokedEvilCircleArcs": 1
+    },
+    "keyboard": {
+      "key": "d",
+      "evilCircleMovement": {
+        "x": 20,
+        "y": 0
+      }
+    },
+    "pageErrors": []
+  },
+  "unsupported": {
+    "message": "This demo needs the Canvas 2D API, which is not supported in this browser.",
+    "canvasHidden": true,
+    "pageErrors": []
+  }
+}

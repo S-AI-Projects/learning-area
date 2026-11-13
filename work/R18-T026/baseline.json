@@ -1,0 +1,28 @@
+{
+  "viewport": {
+    "width": 900,
+    "height": 700
+  },
+  "supported": {
+    "heading": "bouncing balls",
+    "paragraph": "Ball count: 25",
+    "canvas": {
+      "width": 900,
+      "height": 700,
+      "hidden": false,
+      "contextAvailable": true
+    },
+    "pageErrors": []
+  },
+  "unsupportedNullContext": {
+    "paragraph": "Ball count: 25",
+    "canvas": {
+      "width": 900,
+      "height": 700,
+      "hidden": false
+    },
+    "pageErrors": [
+      "Cannot set properties of null (setting 'fillStyle')"
+    ]
+  }
+}

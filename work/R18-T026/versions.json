@@ -1,0 +1,8 @@
+{
+  "node": "v26.10.0",
+  "npm": "11.19.1",
+  "playwright": "1.65.0",
+  "platform": "darwin",
+  "architecture": "arm64",
+  "chromium": "158.0.8127.18"
+}

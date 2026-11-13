@@ -1,0 +1,15 @@
+{
+  "page": "javascript/oojs/assessment/index.html",
+  "viewport": {
+    "width": 960,
+    "height": 720
+  },
+  "scenarios": [
+    "Canvas 2D context available",
+    "HTMLCanvasElement.getContext returns null",
+    "HTMLCanvasElement.getContext is unavailable"
+  ],
+  "keyboard": [
+    "d"
+  ]
+}
