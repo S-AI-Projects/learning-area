@@ -207,6 +207,7 @@ async function runSupportedScenario() {
     assert.equal(initial.trace.fillRectCalls, expected.supported.initialFrame.fillRectCalls);
     assert.equal(initial.trace.filledBallArcs, expected.supported.initialFrame.filledBallArcs);
     assert.equal(initial.trace.strokedEvilCircleArcs.length, expected.supported.initialFrame.strokedEvilCircleArcs);
+    await page.screenshot({ path: path.join(evidenceDirectory, 'supported.png') });
 
     const beforeKey = initial.trace.strokedEvilCircleArcs.at(-1);
     await page.keyboard.press('d');
@@ -295,6 +296,7 @@ async function runUnsupportedScenario(stub) {
     assert.equal(actual.bodyBackground, 'rgb(17, 17, 17)');
     assert.equal(actual.paragraphColor, 'rgb(255, 255, 255)');
     assert.deepEqual(pageErrors, expected.unsupported.pageErrors);
+    await page.screenshot({ path: path.join(evidenceDirectory, `unsupported-${stub}.png`) });
     results[stub === 'null' ? 'unsupportedNullContext' : 'unsupportedMissingMethod'] = {
       ...actual,
       pageErrors,
