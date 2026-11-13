@@ -1,8 +1,31 @@
 body {
   display: flex;
+  flex-wrap: wrap;
 }
 
 body > p {
   flex: 1;
   text-align: center;
+}
+
+#text-rendering-example {
+  flex: 0 0 100%;
+}
+
+#text-rendering-example form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#user-text {
+  flex: 1;
+  min-width: 0;
+}
+
+#text-output {
+  display: block;
+  margin-top: 0.5rem;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
 }

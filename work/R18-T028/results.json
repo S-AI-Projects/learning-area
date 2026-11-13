@@ -1,0 +1,54 @@
+{
+  "status": "passed",
+  "baseline": {
+    "title": "Arrow function example",
+    "generatedNames": [
+      "",
+      "1. Chris",
+      "2. Bob",
+      "3. Mark",
+      "4. Paul"
+    ],
+    "paragraphCount": 5,
+    "inputCount": 0,
+    "bodyDisplay": "flex",
+    "pageErrors": []
+  },
+  "changed": {
+    "generatedNames": [
+      "",
+      "1. Chris",
+      "2. Bob",
+      "3. Mark",
+      "4. Paul"
+    ],
+    "inputText": "[![](https://github.com/S-AI-Projects/learning-area/issues/x)](https://github.com/S-AI-Projects/learning-area/issues/x) <img src=\"/missing-r18-t028.png\" onerror=\"window.__r18HandlerExecutions += 1\">",
+    "expectedOutputText": "[![](https://github.com/S-AI-Projects/learning-area/issues/x)](https://github.com/S-AI-Projects/learning-area/issues/x) <img src=\"/missing-r18-t028.png\" onerror=\"window.__r18HandlerExecutions += 1\">",
+    "actualOutputText": "[![](https://github.com/S-AI-Projects/learning-area/issues/x)](https://github.com/S-AI-Projects/learning-area/issues/x) <img src=\"/missing-r18-t028.png\" onerror=\"window.__r18HandlerExecutions += 1\">",
+    "injectedElementCount": 0,
+    "handlerExecutions": 0,
+    "layout": {
+      "inputText": "[![](https://github.com/S-AI-Projects/learning-area/issues/x)](https://github.com/S-AI-Projects/learning-area/issues/x) <img src=\"/missing-r18-t028.png\" onerror=\"window.__r18HandlerExecutions += 1\">",
+      "outputText": "[![](https://github.com/S-AI-Projects/learning-area/issues/x)](https://github.com/S-AI-Projects/learning-area/issues/x) <img src=\"/missing-r18-t028.png\" onerror=\"window.__r18HandlerExecutions += 1\">",
+      "injectedElementCount": 0,
+      "injectedLinkCount": 0,
+      "injectedImageCount": 0,
+      "handlerExecutions": 0,
+      "bodyDisplay": "flex",
+      "flexWrap": "wrap",
+      "sectionFlexBasis": "100%",
+      "sectionTop": 58,
+      "sectionWidth": 1264,
+      "paragraphBottom": 42,
+      "outputWhiteSpace": "pre-wrap"
+    },
+    "pageErrors": [],
+    "consoleErrors": [],
+    "unexpectedAssetRequests": []
+  },
+  "versions": {
+    "node": "v26.10.0",
+    "playwright": "1.65.0",
+    "chromium": "158.0.8127.18"
+  }
+}
