@@ -1,0 +1,226 @@
+{
+  "task": "R18-T027",
+  "result": "PASS",
+  "inputs": {
+    "viewport": {
+      "width": 1200,
+      "height": 900
+    },
+    "queries": [
+      "",
+      "space flight",
+      "orbital mechanics"
+    ],
+    "mockedResults": {
+      "space flight": [
+        "flight-one",
+        "flight-two"
+      ],
+      "orbital mechanics": [
+        "orbit-one"
+      ]
+    },
+    "externalApiRequests": "blocked; deterministic gapi and YT stubs used"
+  },
+  "expected": {
+    "entryPoint": {
+      "title": "YouTube APIs example",
+      "searchVisible": true,
+      "searchRequired": true,
+      "label": "Enter a search term (required):",
+      "apiInitialization": {
+        "api": "youtube",
+        "version": "v3"
+      }
+    },
+    "emptySubmit": {
+      "invalid": true,
+      "apiCalls": []
+    },
+    "firstSearch": {
+      "apiCalls": [
+        {
+          "part": "snippet",
+          "maxResults": 10,
+          "q": "space flight"
+        }
+      ],
+      "frames": [
+        {
+          "title": "Video flight-one",
+          "src": "https://www.youtube.com/embed/flight-one",
+          "width": "480",
+          "height": "360"
+        },
+        {
+          "title": "Video flight-two",
+          "src": "https://www.youtube.com/embed/flight-two",
+          "width": "480",
+          "height": "360"
+        }
+      ]
+    },
+    "replacement": {
+      "apiCalls": [
+        {
+          "part": "snippet",
+          "maxResults": 10,
+          "q": "space flight"
+        },
+        {
+          "part": "snippet",
+          "maxResults": 10,
+          "q": "orbital mechanics"
+        }
+      ],
+      "frames": [
+        {
+          "title": "Video orbit-one",
+          "src": "https://www.youtube.com/embed/orbit-one",
+          "width": "480",
+          "height": "360"
+        }
+      ]
+    },
+    "layout": {
+      "wrapperWidth": 947.1875,
+      "columnWidths": [
+        473.59375,
+        473.59375
+      ],
+      "centered": true
+    },
+    "pageErrors": []
+  },
+  "actual": {
+    "entryPoint": {
+      "title": "YouTube APIs example",
+      "searchVisible": true,
+      "searchRequired": true,
+      "label": "Enter a search term (required):"
+    },
+    "apiInitialization": {
+      "api": "youtube",
+      "version": "v3"
+    },
+    "layout": {
+      "bodyWidth": 1184,
+      "viewportWidth": 1200,
+      "wrapper": {
+        "x": 126.40625,
+        "width": 947.1875,
+        "height": 94
+      },
+      "controls": {
+        "x": 126.40625,
+        "width": 473.59375,
+        "height": 94
+      },
+      "results": {
+        "x": 600,
+        "width": 473.59375,
+        "height": 94
+      }
+    },
+    "emptySubmit": {
+      "invalid": true,
+      "apiCalls": []
+    },
+    "firstSearch": {
+      "apiCalls": [
+        {
+          "part": "snippet",
+          "maxResults": 10,
+          "q": "space flight"
+        }
+      ],
+      "frames": [
+        {
+          "title": "Video flight-one",
+          "src": "https://www.youtube.com/embed/flight-one",
+          "width": "480",
+          "height": "360"
+        },
+        {
+          "title": "Video flight-two",
+          "src": "https://www.youtube.com/embed/flight-two",
+          "width": "480",
+          "height": "360"
+        }
+      ]
+    },
+    "replacement": {
+      "apiCalls": [
+        {
+          "part": "snippet",
+          "maxResults": 10,
+          "q": "space flight"
+        },
+        {
+          "part": "snippet",
+          "maxResults": 10,
+          "q": "orbital mechanics"
+        }
+      ],
+      "frames": [
+        {
+          "title": "Video orbit-one",
+          "src": "https://www.youtube.com/embed/orbit-one",
+          "width": "480",
+          "height": "360"
+        }
+      ]
+    },
+    "pageErrors": []
+  },
+  "baseline": {
+    "capturedBeforeChanges": true,
+    "expected": {
+      "emptySubmit": {
+        "invalid": true,
+        "apiCalls": []
+      },
+      "searchRequest": {
+        "part": "snippet",
+        "maxResults": 10,
+        "q": "space flight"
+      },
+      "renderedVideoIds": [
+        "video-one",
+        "video-two"
+      ],
+      "wrapperWidth": 947.1875,
+      "columnWidths": [
+        473.59375,
+        473.59375
+      ]
+    },
+    "actual": {
+      "emptySubmissionProducedNoApiCall": true,
+      "searchRequest": {
+        "part": "snippet",
+        "maxResults": 10,
+        "q": "space flight"
+      },
+      "renderedVideoIds": [
+        "video-one",
+        "video-two"
+      ],
+      "wrapperWidth": 947.1875,
+      "columnWidths": [
+        473.59375,
+        473.59375
+      ]
+    },
+    "screenshot": "baseline.png"
+  },
+  "screenshots": {
+    "baseline": "baseline.png",
+    "changed": "after.png"
+  },
+  "toolVersions": {
+    "node": "v26.10.0",
+    "playwright": "1.65.0",
+    "chromium": "158.0.8127.18"
+  }
+}
