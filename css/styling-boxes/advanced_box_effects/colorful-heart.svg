@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="prism" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#f43f5e" />
+      <stop offset=".35" stop-color="#facc15" />
+      <stop offset=".68" stop-color="#22d3ee" />
+      <stop offset="1" stop-color="#8b5cf6" />
+    </linearGradient>
+    <clipPath id="heart">
+      <path d="M32 58 7 34C-7 14 14-1 32 16 50-1 71 14 57 34Z" />
+    </clipPath>
+  </defs>
+  <path fill="url(#prism)" d="M32 58 7 34C-7 14 14-1 32 16 50-1 71 14 57 34Z" />
+  <g clip-path="url(#heart)" fill="#fff" fill-opacity=".2" stroke="#fff" stroke-opacity=".45">
+    <path d="m32 16 8 16-8 26-9-26Zm0 0 15-7-7 23Zm0 0L17 9l6 23Zm8 16 17 2-25 24Zm0 0 7-23 10 25ZM23 32 7 34l10-25Zm0 0-6-23 15 7Z" />
+  </g>
+</svg>
