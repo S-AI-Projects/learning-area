@@ -1,0 +1,82 @@
+{
+  "supported": {
+    "initial": {
+      "title": "Bouncing balls",
+      "heading": "bouncing balls",
+      "paragraph": "Ball count: 25",
+      "canvas": {
+        "width": 960,
+        "height": 720,
+        "hidden": false,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 960,
+          "height": 720
+        },
+        "contextAvailable": true
+      },
+      "trace": {
+        "fillRectCalls": 1,
+        "filledBallArcs": 25,
+        "strokedEvilCircleArcs": [
+          {
+            "x": 332,
+            "y": 608
+          }
+        ]
+      }
+    },
+    "afterKey": {
+      "position": {
+        "x": 352,
+        "y": 608
+      },
+      "fillRectCalls": 2,
+      "frameQueueLength": 1,
+      "paragraph": "Ball count: 25"
+    },
+    "pageErrors": []
+  },
+  "unsupportedNullContext": {
+    "heading": "bouncing balls",
+    "message": "This demo needs the Canvas 2D API, which is not supported in this browser.",
+    "role": "status",
+    "hidden": true,
+    "canvasDisplay": "none",
+    "canvasRect": {
+      "width": 0,
+      "height": 0
+    },
+    "messageRect": {
+      "x": 224,
+      "y": 342,
+      "width": 512,
+      "height": 36
+    },
+    "bodyBackground": "rgb(17, 17, 17)",
+    "paragraphColor": "rgb(255, 255, 255)",
+    "pageErrors": []
+  },
+  "unsupportedMissingMethod": {
+    "heading": "bouncing balls",
+    "message": "This demo needs the Canvas 2D API, which is not supported in this browser.",
+    "role": "status",
+    "hidden": true,
+    "canvasDisplay": "none",
+    "canvasRect": {
+      "width": 0,
+      "height": 0
+    },
+    "messageRect": {
+      "x": 224,
+      "y": 342,
+      "width": 512,
+      "height": 36
+    },
+    "bodyBackground": "rgb(17, 17, 17)",
+    "paragraphColor": "rgb(255, 255, 255)",
+    "pageErrors": []
+  },
+  "result": "passed"
+}

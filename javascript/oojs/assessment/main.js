@@ -2,11 +2,19 @@
 
 // setup canvas
 
+(() => {
 const para = document.querySelector('p');
 let count = 0;
 
 const canvas = document.querySelector('canvas');
-const ctx = canvas.getContext('2d');
+const ctx = typeof canvas.getContext === 'function' ? canvas.getContext('2d') : null;
+
+if (!ctx) {
+  para.textContent = 'This demo needs the Canvas 2D API, which is not supported in this browser.';
+  canvas.hidden = true;
+  document.body.classList.add('canvas-unavailable');
+  return;
+}
 
 const width = canvas.width = window.innerWidth;
 const height = canvas.height = window.innerHeight;
@@ -203,3 +211,4 @@ function loop() {
 }
 
 loop();
+})();
