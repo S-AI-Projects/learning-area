@@ -5,8 +5,35 @@ html {
 }
 
 body {
-  width: 800px;
+  width: calc(100% - 2rem);
+  max-width: 800px;
   margin: 0 auto;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 1;
+  padding: 0.5rem 1rem;
+  color: #005fcc;
+  background: white;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+  outline: 3px solid #005fcc;
+  outline-offset: 2px;
+}
+
+main {
+  min-height: 2rem;
+}
+
+main:focus-visible {
+  outline: 3px solid #005fcc;
+  outline-offset: 4px;
 }
 
 h1, h2 {

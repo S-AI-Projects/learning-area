@@ -1,0 +1,19 @@
+{
+  "nodeVersion": "v26.10.0",
+  "playwrightVersion": "1.65.0",
+  "chromiumVersion": "158.0.8127.18",
+  "viewport": { "width": 375, "height": 800, "reducedMotion": "reduce" },
+  "actual": {
+    "title": "Our superheroes",
+    "headingCount": 0,
+    "articleCount": 0,
+    "section": { "x": 0, "y": 0, "width": 800, "height": 0 },
+    "body": { "x": 0, "y": 0, "width": 800, "height": 0 },
+    "documentScrollWidth": 375,
+    "viewportWidth": 375,
+    "reducedMotionMatches": true,
+    "animationCount": 0,
+    "focusableCount": 0,
+    "pageErrors": []
+  }
+}

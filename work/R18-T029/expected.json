@@ -1,0 +1,28 @@
+{
+  "baseline": {
+    "motion": "No animation or transition exists; prefers-reduced-motion matches without changing content.",
+    "structure": "The starter has an empty header and section, with no keyboard-focusable controls.",
+    "focus": "No visible keyboard focus indicator can be exercised because the starter has no focusable element.",
+    "layout": "Body has a fixed 800px width; the original page has no explicit mobile-width behavior."
+  },
+  "afterChange": {
+    "title": "Our superheroes",
+    "headerPresent": true,
+    "mainId": "heroes",
+    "heroesSectionInsideMain": true,
+    "reducedMotionMatches": true,
+    "animationCount": 0,
+    "animationDuration": "0s",
+    "transitionDuration": "0s",
+    "viewports": {
+      "narrow": { "width": 375, "bodyX": 16, "bodyWidth": 343, "horizontalOverflow": false },
+      "desktop": { "width": 1280, "bodyX": 240, "bodyWidth": 800, "horizontalOverflow": false }
+    },
+    "keyboard": {
+      "tabFocusesSkipLink": true,
+      "enterFocusesMain": true,
+      "skipLinkAndMainHaveVisibleSolid3pxOutline": true
+    },
+    "pageErrors": []
+  }
+}

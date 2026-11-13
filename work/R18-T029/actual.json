@@ -1,0 +1,128 @@
+{
+  "nodeVersion": "v26.10.0",
+  "playwrightVersion": "1.65.0",
+  "chromiumVersion": "158.0.8127.18",
+  "testedViewports": [
+    {
+      "name": "narrow",
+      "width": 375,
+      "height": 800,
+      "expectedBodyX": 16,
+      "expectedBodyWidth": 343,
+      "initialState": {
+        "title": "Our superheroes",
+        "hasHeader": true,
+        "hasMainLandmark": true,
+        "regionIsInsideMain": true,
+        "body": {
+          "x": 16,
+          "width": 343
+        },
+        "main": {
+          "x": 16,
+          "width": 343,
+          "height": 32
+        },
+        "region": {
+          "x": 16,
+          "width": 343
+        },
+        "documentWidth": 375,
+        "viewportWidth": 375,
+        "reducedMotionMatches": true,
+        "animationCount": 0,
+        "motionStyles": [
+          {
+            "animationDuration": "0s",
+            "transitionDuration": "0s"
+          },
+          {
+            "animationDuration": "0s",
+            "transitionDuration": "0s"
+          },
+          {
+            "animationDuration": "0s",
+            "transitionDuration": "0s"
+          }
+        ]
+      },
+      "pageErrors": [],
+      "skipLinkFocus": {
+        "focusVisible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(0, 95, 204)",
+        "visibleInViewport": true
+      },
+      "mainFocus": {
+        "active": true,
+        "focusVisible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(0, 95, 204)",
+        "visibleInViewport": true
+      }
+    },
+    {
+      "name": "desktop",
+      "width": 1280,
+      "height": 800,
+      "expectedBodyX": 240,
+      "expectedBodyWidth": 800,
+      "initialState": {
+        "title": "Our superheroes",
+        "hasHeader": true,
+        "hasMainLandmark": true,
+        "regionIsInsideMain": true,
+        "body": {
+          "x": 240,
+          "width": 800
+        },
+        "main": {
+          "x": 240,
+          "width": 800,
+          "height": 32
+        },
+        "region": {
+          "x": 240,
+          "width": 800
+        },
+        "documentWidth": 1280,
+        "viewportWidth": 1280,
+        "reducedMotionMatches": true,
+        "animationCount": 0,
+        "motionStyles": [
+          {
+            "animationDuration": "0s",
+            "transitionDuration": "0s"
+          },
+          {
+            "animationDuration": "0s",
+            "transitionDuration": "0s"
+          },
+          {
+            "animationDuration": "0s",
+            "transitionDuration": "0s"
+          }
+        ]
+      },
+      "pageErrors": [],
+      "skipLinkFocus": {
+        "focusVisible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(0, 95, 204)",
+        "visibleInViewport": true
+      },
+      "mainFocus": {
+        "active": true,
+        "focusVisible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(0, 95, 204)",
+        "visibleInViewport": true
+      }
+    }
+  ],
+  "outcome": "passed"
+}
