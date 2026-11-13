@@ -1,0 +1,21 @@
+{
+  "target": "javascript/oojs/json/heroes.html",
+  "localServer": "The regression starts an ephemeral 127.0.0.1 HTTP server and waits for the page to return successfully.",
+  "browserContext": {
+    "freshPerViewport": true,
+    "reducedMotion": "reduce"
+  },
+  "viewports": [
+    { "name": "narrow", "width": 375, "height": 800 },
+    { "name": "desktop", "width": 1280, "height": 800 }
+  ],
+  "keyboard": ["Tab", "Enter"],
+  "externalResources": "Google Fonts CSS is stubbed with an empty stylesheet for deterministic offline layout checks.",
+  "assertions": [
+    "Rendered starter structure retains its header and learner-populated heroes section inside main.",
+    "The responsive content area fits the viewport without horizontal overflow.",
+    "Reduced-motion preference is active and no animations or transitions are present.",
+    "Keyboard Tab reveals the skip link and Enter moves focus to the main heroes region with visible focus indicators.",
+    "Unexpected browser page errors fail the check."
+  ]
+}
