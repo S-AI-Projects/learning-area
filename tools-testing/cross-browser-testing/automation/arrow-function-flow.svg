@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="120" viewBox="0 0 480 120">
+  <rect x="4" y="24" width="132" height="72" rx="8" fill="#e8f0fe" stroke="#174ea6" stroke-width="2"/>
+  <text x="70" y="66" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#202124">Names array</text>
+  <path d="M146 60h42m-10-10 10 10-10 10" fill="none" stroke="#202124" stroke-width="3"/>
+  <rect x="196" y="24" width="132" height="72" rx="8" fill="#e6f4ea" stroke="#137333" stroke-width="2"/>
+  <text x="262" y="58" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#202124">Arrow</text>
+  <text x="262" y="77" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#202124">function</text>
+  <path d="M338 60h34m-10-10 10 10-10 10" fill="none" stroke="#202124" stroke-width="3"/>
+  <rect x="380" y="24" width="96" height="72" rx="8" fill="#fef7e0" stroke="#b06000" stroke-width="2"/>
+  <text x="428" y="56" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#202124">Numbered</text>
+  <text x="428" y="75" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#202124">names</text>
+</svg>

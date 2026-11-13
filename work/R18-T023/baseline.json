@@ -1,0 +1,27 @@
+{
+  "source": "tools-testing/cross-browser-testing/automation/index.html before the change",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "title": "Arrow function example",
+  "paragraphCount": 5,
+  "paragraphTexts": [
+    "",
+    "1. Chris",
+    "2. Bob",
+    "3. Mark",
+    "4. Paul"
+  ],
+  "bodyDisplay": "flex",
+  "paragraphWidths": [
+    253,
+    253,
+    253,
+    253,
+    253
+  ],
+  "linkedStylesheetApplied": true,
+  "imageCount": 0,
+  "pageErrors": []
+}
