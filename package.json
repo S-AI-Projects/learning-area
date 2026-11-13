@@ -1,0 +1,10 @@
+{
+  "name": "learning-area-course-checks",
+  "private": true,
+  "scripts": {
+    "test:course:r18-t024": "node tests/course/r18-t024.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.65.0"
+  }
+}

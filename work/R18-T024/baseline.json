@@ -1,0 +1,28 @@
+{
+  "capturedBeforeChanges": true,
+  "observations": {
+    "jqueryLoaded": true,
+    "easyTabsAvailable": false,
+    "pageErrors": [
+      "$(...).easyTabs is not a function"
+    ],
+    "failedResources": [
+      "specimen_files/easytabs.js returned 404"
+    ],
+    "activeTabsAfterLoad": [],
+    "visibleLinkedPanelsAfterLoad": [
+      "specimen",
+      "layout",
+      "glyphs",
+      "installing"
+    ],
+    "visibleLinkedPanelsAfterClickingLayout": [
+      "specimen",
+      "layout",
+      "glyphs",
+      "installing"
+    ],
+    "containerHeight": 6466.671875,
+    "containerWidth": 865
+  }
+}

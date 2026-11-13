@@ -1,0 +1,229 @@
+{
+  "task": "R18-T024",
+  "baseline": {
+    "jqueryLoaded": true,
+    "easyTabsAvailable": false,
+    "pageErrors": [
+      "$(...).easyTabs is not a function"
+    ],
+    "failedResources": [
+      "specimen_files/easytabs.js returned 404"
+    ],
+    "activeTabsAfterLoad": [],
+    "visibleLinkedPanelsAfterLoad": [
+      "specimen",
+      "layout",
+      "glyphs",
+      "installing"
+    ],
+    "visibleLinkedPanelsAfterClickingLayout": [
+      "specimen",
+      "layout",
+      "glyphs",
+      "installing"
+    ],
+    "containerHeight": 6466.671875,
+    "containerWidth": 865
+  },
+  "expected": {
+    "activeTabCount": 1,
+    "visibleLinkedPanelCount": 1,
+    "listenerCountAfterSecondInitialization": 1,
+    "handlerInvocationsPerClick": 1,
+    "activeTimeoutCount": 0,
+    "activeIntervalCount": 0,
+    "addedContainerNodes": 0,
+    "browserErrors": []
+  },
+  "actual": {
+    "initial": {
+      "title": "Zantroke Regular Specimen",
+      "requiredIds": true,
+      "activeTabCount": 1,
+      "activeTab": "#specimen",
+      "visibleLinkedPanels": [
+        "specimen"
+      ],
+      "containerNodeCount": 685,
+      "containerBounds": {
+        "x": 207.5,
+        "y": 0,
+        "width": 865,
+        "height": 3259.609375,
+        "top": 0,
+        "right": 1072.5,
+        "bottom": 3259.609375,
+        "left": 207.5
+      },
+      "headerBackground": "rgb(0, 0, 0)",
+      "mainBackground": "rgb(255, 255, 255)",
+      "specimenText": "AaBb",
+      "specimenFont": "zantrokeregular",
+      "fontLoaded": true,
+      "specimenBounds": {
+        "x": 227.5,
+        "y": 167,
+        "width": 825,
+        "height": 3001.609375,
+        "top": 167,
+        "right": 1052.5,
+        "bottom": 3168.609375,
+        "left": 227.5
+      }
+    },
+    "lifecycleAfterReinitialize": {
+      "tabAdds": 2,
+      "tabRemoves": 1,
+      "tabInvocations": 0,
+      "timeoutAdds": 0,
+      "activeTimeouts": 0,
+      "intervalAdds": 0,
+      "activeIntervals": 0,
+      "activeListeners": 1,
+      "containerNodeCount": 685
+    },
+    "interactions": [
+      {
+        "panel": "layout",
+        "activeTabCount": 1,
+        "visibleLinkedPanels": [
+          "layout"
+        ],
+        "selectedPanelBounds": {
+          "x": 227.5,
+          "y": 167,
+          "width": 825,
+          "height": 905.59375,
+          "top": 167,
+          "right": 1052.5,
+          "bottom": 1072.59375,
+          "left": 227.5
+        },
+        "containerNodeCount": 685,
+        "handlerInvocations": 1,
+        "activeListeners": 1,
+        "activeTimeouts": 0,
+        "activeIntervals": 0
+      },
+      {
+        "panel": "specimen",
+        "activeTabCount": 1,
+        "visibleLinkedPanels": [
+          "specimen"
+        ],
+        "selectedPanelBounds": {
+          "x": 227.5,
+          "y": 167,
+          "width": 825,
+          "height": 3001.609375,
+          "top": 167,
+          "right": 1052.5,
+          "bottom": 3168.609375,
+          "left": 227.5
+        },
+        "containerNodeCount": 685,
+        "handlerInvocations": 2,
+        "activeListeners": 1,
+        "activeTimeouts": 0,
+        "activeIntervals": 0
+      },
+      {
+        "panel": "layout",
+        "activeTabCount": 1,
+        "visibleLinkedPanels": [
+          "layout"
+        ],
+        "selectedPanelBounds": {
+          "x": 227.5,
+          "y": 167,
+          "width": 825,
+          "height": 905.59375,
+          "top": 167,
+          "right": 1052.5,
+          "bottom": 1072.59375,
+          "left": 227.5
+        },
+        "containerNodeCount": 685,
+        "handlerInvocations": 3,
+        "activeListeners": 1,
+        "activeTimeouts": 0,
+        "activeIntervals": 0
+      },
+      {
+        "panel": "glyphs",
+        "activeTabCount": 1,
+        "visibleLinkedPanels": [
+          "glyphs"
+        ],
+        "selectedPanelBounds": {
+          "x": 227.5,
+          "y": 167,
+          "width": 825,
+          "height": 1451.46875,
+          "top": 167,
+          "right": 1052.5,
+          "bottom": 1618.46875,
+          "left": 227.5
+        },
+        "containerNodeCount": 685,
+        "handlerInvocations": 4,
+        "activeListeners": 1,
+        "activeTimeouts": 0,
+        "activeIntervals": 0
+      },
+      {
+        "panel": "installing",
+        "activeTabCount": 1,
+        "visibleLinkedPanels": [
+          "installing"
+        ],
+        "selectedPanelBounds": {
+          "x": 227.5,
+          "y": 167,
+          "width": 825,
+          "height": 796,
+          "top": 167,
+          "right": 1052.5,
+          "bottom": 963,
+          "left": 227.5
+        },
+        "containerNodeCount": 685,
+        "handlerInvocations": 5,
+        "activeListeners": 1,
+        "activeTimeouts": 0,
+        "activeIntervals": 0
+      },
+      {
+        "panel": "specimen",
+        "activeTabCount": 1,
+        "visibleLinkedPanels": [
+          "specimen"
+        ],
+        "selectedPanelBounds": {
+          "x": 227.5,
+          "y": 167,
+          "width": 825,
+          "height": 3001.609375,
+          "top": 167,
+          "right": 1052.5,
+          "bottom": 3168.609375,
+          "left": 227.5
+        },
+        "containerNodeCount": 685,
+        "handlerInvocations": 6,
+        "activeListeners": 1,
+        "activeTimeouts": 0,
+        "activeIntervals": 0
+      }
+    ],
+    "browserErrors": [],
+    "serverOutput": "127.0.0.1 - - [13/Nov/2026 13:26:01] \"GET / HTTP/1.1\" 200 -\n127.0.0.1 - - [13/Nov/2026 13:26:01] \"GET /css/web-fonts/fonts/zantroke-demo.html HTTP/1.1\" 200 -\n127.0.0.1 - - [13/Nov/2026 13:26:01] \"GET /css/web-fonts/fonts/stylesheet.css HTTP/1.1\" 200 -\n127.0.0.1 - - [13/Nov/2026 13:26:01] \"GET /css/web-fonts/fonts/specimen_tabs.js HTTP/1.1\" 200 -\n127.0.0.1 - - [13/Nov/2026 13:26:01] \"GET /css/web-fonts/fonts/specimen_files/specimen_stylesheet.css HTTP/1.1\" 200 -\n127.0.0.1 - - [13/Nov/2026 13:26:01] \"GET /css/web-fonts/fonts/specimen_files/grid_12-825-55-15.css HTTP/1.1\" 200 -\n127.0.0.1 - - [13/Nov/2026 13:26:01] \"GET /css/web-fonts/fonts/zantroke-webfont.woff2 HTTP/1.1\" 200 -\n"
+  },
+  "status": "passed",
+  "cleanup": {
+    "pageClosed": true,
+    "contextClosed": true,
+    "browserClosed": true,
+    "serverStopped": true
+  }
+}

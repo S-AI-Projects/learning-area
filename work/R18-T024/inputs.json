@@ -1,0 +1,31 @@
+{
+  "pagePath": "/css/web-fonts/fonts/zantroke-demo.html",
+  "viewport": {
+    "width": 1280,
+    "height": 900
+  },
+  "tabSequence": [
+    "layout",
+    "specimen",
+    "layout",
+    "glyphs",
+    "installing",
+    "specimen"
+  ],
+  "requiredIds": [
+    "container",
+    "header",
+    "main_content",
+    "specimen"
+  ],
+  "repeatInitialization": true,
+  "assertions": [
+    "one active tab and one visible linked panel after each click",
+    "one active click listener after repeated initialization",
+    "one handler invocation per click",
+    "no active page timers",
+    "no additional nodes within #container",
+    "specimen font and rendered layout",
+    "no browser page errors, console errors, or failed HTTP requests"
+  ]
+}
