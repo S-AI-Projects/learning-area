@@ -1,0 +1,269 @@
+{
+  "mode": "changed",
+  "outcome": "passed",
+  "tools": {
+    "node": "v26.10.0",
+    "playwright": "1.65.0",
+    "chromium": "158.0.8127.18",
+    "platform": "darwin-arm64"
+  },
+  "input": {
+    "page": "/html/multimedia-and-embedding/responsive-images/responsive.html",
+    "viewports": [
+      {
+        "width": 360,
+        "height": 800
+      },
+      {
+        "width": 1280,
+        "height": 800
+      }
+    ],
+    "deviceScaleFactor": 1,
+    "browserContext": "fresh context for each viewport",
+    "linkAction": "focus the Miwok credit link and press Enter; destination is mocked"
+  },
+  "expected": {
+    "pageTitle": "Responsive HTML images demo",
+    "horizontalOverflow": false,
+    "directContentOrder": [
+      "h1",
+      "p",
+      "picture",
+      "p",
+      "img",
+      "p"
+    ],
+    "imageAlts": [
+      "Chris standing up holding his daughter Elva",
+      "Elva dressed as a fairy"
+    ],
+    "verticalPageScroll": true,
+    "creditNavigationTitle": "Credit link destination"
+  },
+  "actual": [
+    {
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "document": {
+        "clientWidth": 360,
+        "scrollWidth": 360,
+        "scrollHeight": 1461,
+        "scrollY": 0
+      },
+      "horizontalOverflow": false,
+      "verticalPageScroll": true,
+      "bounds": {
+        "body": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 1461.2,
+          "right": 360,
+          "bottom": 1461.2
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 200,
+          "right": 360,
+          "bottom": 200
+        },
+        "main": {
+          "x": 0,
+          "y": 200,
+          "width": 360,
+          "height": 1261.2,
+          "right": 360,
+          "bottom": 1461.2
+        },
+        "section": {
+          "x": 0,
+          "y": 200,
+          "width": 360,
+          "height": 1261.2,
+          "right": 360,
+          "bottom": 1461.2
+        },
+        "images": [
+          {
+            "alt": "Chris standing up holding his daughter Elva",
+            "bounds": {
+              "x": 20,
+              "y": 579.88,
+              "width": 320,
+              "height": 368,
+              "right": 340,
+              "bottom": 947.88
+            }
+          },
+          {
+            "alt": "Elva dressed as a fairy",
+            "bounds": {
+              "x": 20,
+              "y": 1171.88,
+              "width": 319.98,
+              "height": 213.33,
+              "right": 339.98,
+              "bottom": 1385.2
+            }
+          }
+        ]
+      },
+      "contentOrder": [
+        "h1",
+        "p",
+        "picture",
+        "p",
+        "img",
+        "p"
+      ],
+      "images": [
+        {
+          "alt": "Chris standing up holding his daughter Elva",
+          "currentSrc": "/html/multimedia-and-embedding/responsive-images/elva-480w-close-portrait.jpg",
+          "complete": true,
+          "naturalWidth": 480
+        },
+        {
+          "alt": "Elva dressed as a fairy",
+          "currentSrc": "/html/multimedia-and-embedding/responsive-images/elva-fairy-480w.jpg",
+          "complete": true,
+          "naturalWidth": 480
+        }
+      ],
+      "creditLink": {
+        "text": "Miwok",
+        "href": "https://www.flickr.com/photos/miwok/17086751527/",
+        "tabIndex": 0,
+        "bounds": {
+          "x": 213.88,
+          "y": 743.2,
+          "width": 45.34,
+          "height": 18
+        },
+        "focusedWithKeyboard": true,
+        "navigatedToMockedDestination": true
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshot": "work/R18-T022/changed-360.png"
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "document": {
+        "clientWidth": 1280,
+        "scrollWidth": 1280,
+        "scrollHeight": 1541,
+        "scrollY": 0
+      },
+      "horizontalOverflow": false,
+      "verticalPageScroll": true,
+      "bounds": {
+        "body": {
+          "x": 40,
+          "y": 0,
+          "width": 1200,
+          "height": 1540.88,
+          "right": 1240,
+          "bottom": 1540.88
+        },
+        "header": {
+          "x": 40,
+          "y": 0,
+          "width": 1200,
+          "height": 200,
+          "right": 1240,
+          "bottom": 200
+        },
+        "main": {
+          "x": 40,
+          "y": 200,
+          "width": 1200,
+          "height": 1340.88,
+          "right": 1240,
+          "bottom": 1540.88
+        },
+        "section": {
+          "x": 40,
+          "y": 200,
+          "width": 1200,
+          "height": 1340.88,
+          "right": 1240,
+          "bottom": 1540.88
+        },
+        "images": [
+          {
+            "alt": "Chris standing up holding his daughter Elva",
+            "bounds": {
+              "x": 240,
+              "y": 387.88,
+              "width": 800,
+              "height": 464,
+              "right": 1040,
+              "bottom": 851.88
+            }
+          },
+          {
+            "alt": "Elva dressed as a fairy",
+            "bounds": {
+              "x": 240,
+              "y": 931.88,
+              "width": 800,
+              "height": 533,
+              "right": 1040,
+              "bottom": 1464.88
+            }
+          }
+        ]
+      },
+      "contentOrder": [
+        "h1",
+        "p",
+        "picture",
+        "p",
+        "img",
+        "p"
+      ],
+      "images": [
+        {
+          "alt": "Chris standing up holding his daughter Elva",
+          "currentSrc": "/html/multimedia-and-embedding/responsive-images/elva-800w.jpg",
+          "complete": true,
+          "naturalWidth": 800
+        },
+        {
+          "alt": "Elva dressed as a fairy",
+          "currentSrc": "/html/multimedia-and-embedding/responsive-images/elva-fairy-800w.jpg",
+          "complete": true,
+          "naturalWidth": 800
+        }
+      ],
+      "creditLink": {
+        "text": "Miwok",
+        "href": "https://www.flickr.com/photos/miwok/17086751527/",
+        "tabIndex": 0,
+        "bounds": {
+          "x": 253.88,
+          "y": 742.88,
+          "width": 45.34,
+          "height": 18
+        },
+        "focusedWithKeyboard": true,
+        "navigatedToMockedDestination": true
+      },
+      "pageErrors": [],
+      "consoleErrors": [],
+      "failedRequests": [],
+      "screenshot": "work/R18-T022/changed-1280.png"
+    }
+  ],
+  "error": null
+}
