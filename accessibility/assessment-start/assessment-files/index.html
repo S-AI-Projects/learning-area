@@ -109,21 +109,40 @@
 
         </aside>
         <section class="comments">
-          <div class="show-hide">Show comments</div>
-
-          <div class="comment-wrapper">
+          <button
+            type="button"
+            class="show-hide"
+            aria-expanded="false"
+            aria-controls="comments"
+          >
+            Show comments
+          </button>
+          <div id="comments" class="comment-wrapper" hidden>
 
             <font size="6">Add comment</font>
 
+
             <form class="comment-form">
               <div class="flex-pair">
-                Your name:
-                <input type="text" name="name" id="name" placeholder="Enter your name">
+                <label for="name">Your name:</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Enter your name"
+                >
               </div>
+
               <div class="flex-pair">
-                Your comment:
-                <input type="text" name="comment" id="comment" placeholder="Enter your comment">
+                <label for="comment">Your comment:</label>
+                <input
+                  type="text"
+                  name="comment"
+                  id="comment"
+                  placeholder="Enter your comment"
+                >
               </div>
+
               <div>
                 <input type="submit" value="Submit comment">
               </div>
@@ -132,15 +151,10 @@
             <font size="6">Comments</font>
 
             <ul class="comment-container">
-
               <li>
-
                 <p>Bob Fossil</p>
-
                 <p>Oh I am so glad you taught me all about the big brown angry guys in the woods. With their sniffing little noses and their bad attitudes, they can sure be a menace — I was thinking of putting them all in a truck and driving them outta here. I run a zoo, you know.</p>
-
               </li>
-
             </ul>
 
           </div>
