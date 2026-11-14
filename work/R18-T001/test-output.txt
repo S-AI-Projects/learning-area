@@ -1,0 +1,11 @@
+PASS: Comments start hidden.
+PASS: No positive tabindex values.
+PASS: Tab reaches Show comments and focus is visible.
+PASS: Enter opens comments.
+PASS: Space closes comments.
+PASS: Tab reaches name, comment, and submit controls in order.
+PASS: Both form fields have associated labels.
+PASS: Keyboard submission adds the comment and clears both fields.
+PASS: No unexpected page errors.
+
+All R18-T001 checks passed.
