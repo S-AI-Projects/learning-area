@@ -1,0 +1,13 @@
+PASS: Page loaded successfully with HTTP 200
+PASS: Preserved CSS fixed positioning layout
+PASS: Initial tablist and tabpanel states verified
+PASS: Tab reaches #tab-1 with visible focus
+PASS: Tab reaches active #tabpanel-1 with visible focus
+PASS: Shift+Tab returns focus from panel to tab
+PASS: Arrow keys, Home, and End navigate tabs with wrapping
+PASS: Enter activates #tab-2 and enables Tab into #tabpanel-2
+PASS: Space activates #tab-3 and enables Tab into #tabpanel-3
+PASS: No positive tabindex values found
+PASS: No unexpected page or console errors
+
+All R18-T051 regression checks passed successfully.
