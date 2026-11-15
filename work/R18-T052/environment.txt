@@ -1,0 +1,8 @@
+Operating System: macOS 26.6.2 (Apple Silicon)
+Node.js: v26.13.0
+npm: 11.20.0
+Git: 2.54.0
+Playwright: 1.65.1
+Chromium: 159.0.8154.6
+Target: accessibility/assessment-start/assessment-files/index.html
+Tested Viewports: 360x800, 1280x800
