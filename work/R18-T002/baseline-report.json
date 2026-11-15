@@ -1,0 +1,284 @@
+[
+  {
+    "viewport": "360x800",
+    "metrics": {
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "documentScroll": {
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "scrollHeight": 800,
+        "clientHeight": 800,
+        "hasHorizontalOverflow": false,
+        "overflowAmount": 0
+      },
+      "body": {
+        "label": "body",
+        "exists": true,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 333.390625
+        },
+        "scrollWidth": 360,
+        "clientWidth": 360,
+        "offsetWidth": 360,
+        "overflow": "visible",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "display": "block",
+        "boxSizing": "border-box",
+        "width": "360px",
+        "maxWidth": "none",
+        "padding": "0px",
+        "margin": "0px",
+        "clippedRight": false,
+        "clippedBottom": false
+      },
+      "section": {
+        "label": "section.preview",
+        "exists": true,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 324,
+          "height": 60.390625
+        },
+        "scrollWidth": 322,
+        "clientWidth": 322,
+        "offsetWidth": 324,
+        "overflow": "visible",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "display": "block",
+        "boxSizing": "border-box",
+        "width": "324px",
+        "maxWidth": "700px",
+        "padding": "10px 14px 10px 10px",
+        "margin": "0px 0px 10px",
+        "clippedRight": false,
+        "clippedBottom": false
+      },
+      "textarea": {
+        "label": "textarea.playable",
+        "exists": true,
+        "rect": {
+          "x": 0,
+          "y": 70.390625,
+          "width": 324,
+          "height": 220
+        },
+        "scrollWidth": 318,
+        "clientWidth": 318,
+        "offsetWidth": 324,
+        "overflow": "auto",
+        "overflowX": "auto",
+        "overflowY": "auto",
+        "display": "block",
+        "boxSizing": "border-box",
+        "width": "324px",
+        "maxWidth": "700px",
+        "padding": "10px 10px 0px",
+        "margin": "0px 0px 10px",
+        "clippedRight": false,
+        "clippedBottom": false
+      },
+      "buttons": {
+        "label": ".playable-buttons",
+        "exists": true,
+        "rect": {
+          "x": 0,
+          "y": 300.390625,
+          "width": 324,
+          "height": 33
+        },
+        "scrollWidth": 324,
+        "clientWidth": 324,
+        "offsetWidth": 324,
+        "overflow": "visible",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "display": "block",
+        "boxSizing": "border-box",
+        "width": "324px",
+        "maxWidth": "700px",
+        "padding": "5px 10px 5px 26px",
+        "margin": "0px",
+        "clippedRight": false,
+        "clippedBottom": false
+      },
+      "resetBtn": {
+        "label": "#reset",
+        "exists": true,
+        "rect": {
+          "x": 263.171875,
+          "y": 307.390625,
+          "width": 50.828125,
+          "height": 21
+        },
+        "scrollWidth": 47,
+        "clientWidth": 47,
+        "offsetWidth": 51,
+        "overflow": "clip",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "display": "inline-block",
+        "boxSizing": "border-box",
+        "width": "50.8281px",
+        "maxWidth": "none",
+        "padding": "1px 6px",
+        "margin": "0px",
+        "clippedRight": false,
+        "clippedBottom": false
+      }
+    },
+    "errors": [
+      "Failed to set the 'textContent' property on 'HTMLScriptElement': Identifier 'section' has already been declared"
+    ],
+    "screenshotPath": "/Users/giteshpatil/Desktop/learning-area-antigravity/work/R18-T002/baseline-360x800.png"
+  },
+  {
+    "viewport": "1280x800",
+    "metrics": {
+      "viewport": {
+        "width": 1280,
+        "height": 800
+      },
+      "documentScroll": {
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "scrollHeight": 800,
+        "clientHeight": 800,
+        "hasHorizontalOverflow": false,
+        "overflowAmount": 0
+      },
+      "body": {
+        "label": "body",
+        "exists": true,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 333.390625
+        },
+        "scrollWidth": 1280,
+        "clientWidth": 1280,
+        "offsetWidth": 1280,
+        "overflow": "visible",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "display": "block",
+        "boxSizing": "border-box",
+        "width": "1280px",
+        "maxWidth": "none",
+        "padding": "0px",
+        "margin": "0px",
+        "clippedRight": false,
+        "clippedBottom": false
+      },
+      "section": {
+        "label": "section.preview",
+        "exists": true,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 700,
+          "height": 60.390625
+        },
+        "scrollWidth": 698,
+        "clientWidth": 698,
+        "offsetWidth": 700,
+        "overflow": "visible",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "display": "block",
+        "boxSizing": "border-box",
+        "width": "700px",
+        "maxWidth": "700px",
+        "padding": "10px 14px 10px 10px",
+        "margin": "0px 0px 10px",
+        "clippedRight": false,
+        "clippedBottom": false
+      },
+      "textarea": {
+        "label": "textarea.playable",
+        "exists": true,
+        "rect": {
+          "x": 0,
+          "y": 70.390625,
+          "width": 700,
+          "height": 220
+        },
+        "scrollWidth": 694,
+        "clientWidth": 694,
+        "offsetWidth": 700,
+        "overflow": "auto",
+        "overflowX": "auto",
+        "overflowY": "auto",
+        "display": "block",
+        "boxSizing": "border-box",
+        "width": "700px",
+        "maxWidth": "700px",
+        "padding": "10px 10px 0px",
+        "margin": "0px 0px 10px",
+        "clippedRight": false,
+        "clippedBottom": false
+      },
+      "buttons": {
+        "label": ".playable-buttons",
+        "exists": true,
+        "rect": {
+          "x": 0,
+          "y": 300.390625,
+          "width": 700,
+          "height": 33
+        },
+        "scrollWidth": 700,
+        "clientWidth": 700,
+        "offsetWidth": 700,
+        "overflow": "visible",
+        "overflowX": "visible",
+        "overflowY": "visible",
+        "display": "block",
+        "boxSizing": "border-box",
+        "width": "700px",
+        "maxWidth": "700px",
+        "padding": "5px 10px 5px 26px",
+        "margin": "0px",
+        "clippedRight": false,
+        "clippedBottom": false
+      },
+      "resetBtn": {
+        "label": "#reset",
+        "exists": true,
+        "rect": {
+          "x": 639.171875,
+          "y": 307.390625,
+          "width": 50.828125,
+          "height": 21
+        },
+        "scrollWidth": 47,
+        "clientWidth": 47,
+        "offsetWidth": 51,
+        "overflow": "clip",
+        "overflowX": "clip",
+        "overflowY": "clip",
+        "display": "inline-block",
+        "boxSizing": "border-box",
+        "width": "50.8281px",
+        "maxWidth": "none",
+        "padding": "1px 6px",
+        "margin": "0px",
+        "clippedRight": false,
+        "clippedBottom": false
+      }
+    },
+    "errors": [
+      "Failed to set the 'textContent' property on 'HTMLScriptElement': Identifier 'section' has already been declared"
+    ],
+    "screenshotPath": "/Users/giteshpatil/Desktop/learning-area-antigravity/work/R18-T002/baseline-1280x800.png"
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "name": "learning-area-antigravity",
+  "version": "1.0.0",
+  "description": "Welcome to the GitHub repository for the [MDN Learning Area](https://developer.mozilla.org/en-US/Learn).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test-r18-t002": "node tests/course/r18-t002.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "playwright": "^1.65.1"
+  }
+}
