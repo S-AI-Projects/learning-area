@@ -11,9 +11,15 @@ html {
 }
 
 body {
-  width: 80%;
-  min-width: 1024px;
+  width: 90%;
+  max-width: 1200px;
   margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  body {
+    width: 80%;
+  }
 }
 
 /* || typography */
@@ -137,6 +143,13 @@ footer {
 
 /* Table styling */
 
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 10px;
+}
+
 table {
   width: 100%;
   background-color: #dde;
@@ -161,13 +174,18 @@ tbody tr:nth-child(odd) {
 
 /* styling content images and audio */
 
-img, audio {
+img {
+  max-width: 100%;
+  height: auto;
   display: block;
   margin: 0 auto;
 }
 
 audio {
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Comments styling */
@@ -247,4 +265,64 @@ audio {
 
 .comment-container li p:nth-child(2) {
   flex: 5;
+}
+
+/* || Responsive layout */
+
+@media (max-width: 768px) {
+  div[class="nav"] {
+    height: auto;
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  div[class="nav"] ul {
+    margin: 0 0 10px 0;
+    flex-wrap: wrap;
+  }
+
+  div[class="nav"] li {
+    padding: 5px;
+  }
+
+  div[class="nav"] .search {
+    padding: 0 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  article {
+    margin-right: 0;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+  }
+
+  .secondary {
+    padding: 10px 15px;
+  }
+
+  .comment-form .flex-pair {
+    flex-direction: column;
+    padding: 0 1rem 1rem;
+  }
+
+  .comment-form label {
+    text-align: left;
+    margin-bottom: 5px;
+  }
+
+  .comment-form input {
+    margin-left: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .comment-form input[type="submit"] {
+    width: 50%;
+    min-width: 140px;
+  }
 }

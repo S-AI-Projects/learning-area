@@ -1,0 +1,19 @@
+PASS: No horizontal overflow at 360x800
+PASS: Content order preserved at 360x800
+PASS: Intentional scrollable table region verified at 360x800
+PASS: Media elements within viewport bounds at 360x800
+PASS: Source anchors #name and #comment are fully visible and unclipped at 360x800
+PASS: Comment submission succeeds and updates DOM at 360x800
+PASS: No console or page errors at 360x800
+PASS: No horizontal overflow at 1280x800
+PASS: Content order preserved at 1280x800
+PASS: Intentional scrollable table region verified at 1280x800
+PASS: Media elements within viewport bounds at 1280x800
+PASS: Source anchors #name and #comment are fully visible and unclipped at 1280x800
+PASS: Comment submission succeeds and updates DOM at 1280x800
+PASS: No console or page errors at 1280x800
+
+Running deliberate overflow mutation check...
+PASS: Mutation test confirmed layout check fails when horizontal overflow occurs.
+
+All R18-T052 responsive layout checks passed successfully.

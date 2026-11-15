@@ -1,0 +1,26 @@
+{
+  "name": "learning-area",
+  "version": "1.0.0",
+  "description": "Welcome to the GitHub repository for the [MDN Learning Area](https://developer.mozilla.org/en-US/Learn).",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests/course/r18-t052.mjs",
+    "test:course:r18-t052": "node tests/course/r18-t052.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manku341/learning-area.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/manku341/learning-area/issues"
+  },
+  "homepage": "https://github.com/manku341/learning-area#readme",
+  "devDependencies": {
+    "playwright": "^1.65.1"
+  }
+}
+
