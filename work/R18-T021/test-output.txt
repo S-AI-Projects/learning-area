@@ -1,0 +1,14 @@
+Command: node tests/course/r18-t021.mjs
+Node.js: v26.10.0
+Playwright: 1.65.0
+Chromium: 158.0.8127.18
+
+PASS: R18-T021 keyboard accessibility
+PASS: Tab navigation
+PASS: Visible focus
+PASS: Enter activation
+PASS: Main content focus
+PASS: No positive tabindex
+PASS: No unexpected browser errors
+
+Exit status: 0
