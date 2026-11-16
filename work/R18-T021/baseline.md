@@ -3,19 +3,18 @@
 Page:
 html/introduction-to-html/getting-started/index.html
 
-Original page type:
-Static HTML demonstration.
+Baseline source: parent revision `2197326`
 
-Original content:
-<p>This is my page</p>
+Original page type: static HTML demonstration.
 
-Verified original behavior:
-- No skip-to-content link.
-- No main landmark.
-- No interactive application controls.
-- The paragraph is rendered on the page.
-- No keyboard skip navigation was available.
+Original content: one paragraph, “This is my page”.
 
-Baseline source:
-The original HTML supplied and inspected before editing.
+Baseline browser check: rendered the parent-revision HTML in Playwright
+Chromium, pressed Tab, and inspected the DOM and active element.
+
+Observed baseline:
+- The paragraph rendered.
+- No main landmark or skip link existed.
+- Tab left focus on `BODY`; there was no keyboard skip navigation or visible
+  focus indicator for page content.
 

@@ -6,7 +6,6 @@ import { resolve, extname, sep } from "node:path";
 import { chromium } from "playwright";
 
 const root = process.cwd();
-const port = 4178;
 const target =
   "/html/introduction-to-html/getting-started/index.html";
 
@@ -15,6 +14,7 @@ let browser;
 let context;
 
 const browserErrors = [];
+const serverErrors = [];
 
 const mimeTypes = {
   ".html": "text/html; charset=utf-8",
@@ -23,7 +23,7 @@ const mimeTypes = {
 };
 
 try {
-  // Start a local static HTTP server.
+  // Start a local static HTTP server on an available port.
   server = createServer(async (req, res) => {
     try {
       const pathname = new URL(
@@ -47,21 +47,24 @@ try {
       });
 
       res.end(content);
-    } catch {
-      res.writeHead(404);
-      res.end("Not found");
+    } catch (error) {
+      serverErrors.push(error.message);
+      res.writeHead(500);
+      res.end("Static server error");
     }
   });
 
   await new Promise((resolveListen, reject) => {
     server.once("error", reject);
-    server.listen(port, "127.0.0.1", resolveListen);
+    server.listen(0, "127.0.0.1", resolveListen);
   });
 
   // Verify server readiness.
-  const response = await fetch(
-    `http://127.0.0.1:${port}${target}`
-  );
+  const address = server.address();
+  assert.ok(address && typeof address === "object");
+
+  const baseUrl = `http://127.0.0.1:${address.port}`;
+  const response = await fetch(`${baseUrl}${target}`);
 
   assert.equal(response.status, 200);
 
@@ -89,10 +92,11 @@ try {
     );
   });
 
-  await page.goto(
-    `http://127.0.0.1:${port}${target}`,
-    { waitUntil: "networkidle" }
-  );
+  const documentResponse = await page.goto(`${baseUrl}${target}`, {
+    waitUntil: "networkidle"
+  });
+
+  assert.equal(documentResponse?.status(), 200);
 
   // Check the original teaching content.
   const main = page.locator("main#main-content");
@@ -133,18 +137,36 @@ try {
 
     return {
       top: style.top,
+      left: style.left,
       outlineStyle: style.outlineStyle,
       outlineWidth: style.outlineWidth,
       visibility: style.visibility,
-      display: style.display
+      display: style.display,
+      opacity: style.opacity,
+      bounds: {
+        x: el.getBoundingClientRect().x,
+        y: el.getBoundingClientRect().y,
+        right: el.getBoundingClientRect().right,
+        bottom: el.getBoundingClientRect().bottom
+      },
+      viewport: {
+        width: innerWidth,
+        height: innerHeight
+      }
     };
   });
 
   assert.equal(focusStyle.top, "10px");
+  assert.equal(focusStyle.left, "10px");
   assert.notEqual(focusStyle.outlineStyle, "none");
-  assert.notEqual(focusStyle.outlineWidth, "0px");
-  assert.notEqual(focusStyle.visibility, "hidden");
+  assert.equal(focusStyle.outlineWidth, "3px");
+  assert.equal(focusStyle.visibility, "visible");
   assert.notEqual(focusStyle.display, "none");
+  assert.ok(Number(focusStyle.opacity) > 0);
+  assert.ok(focusStyle.bounds.x >= 0);
+  assert.ok(focusStyle.bounds.y >= 0);
+  assert.ok(focusStyle.bounds.right <= focusStyle.viewport.width);
+  assert.ok(focusStyle.bounds.bottom <= focusStyle.viewport.height);
 
   // Activate skip link using Enter.
   await page.keyboard.press("Enter");
@@ -174,6 +196,12 @@ try {
     positiveTabindex,
     0,
     "Positive tabindex values are not allowed"
+  );
+
+  assert.deepEqual(
+    serverErrors,
+    [],
+    "Unexpected local server errors occurred"
   );
 
   // Reject unexpected browser errors.

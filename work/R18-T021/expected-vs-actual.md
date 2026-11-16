@@ -2,13 +2,17 @@
 
 | Check | Expected | Actual |
 |---|---|---|
-| Main landmark | Exactly one | PASS |
-| Original paragraph | Preserved | PASS |
-| Skip link | Present | PASS |
-| Tab navigation | Skip link receives focus | PASS |
-| Visible focus | Visible outline | PASS |
-| Enter activation | Navigate to main | PASS |
-| Main focus | Main receives focus | PASS |
+| Baseline main landmark | Absent | Absent |
+| Baseline skip link | Absent | Absent |
+| Baseline Tab behavior | No page control receives focus | `BODY` remained active |
+| Changed main landmark | Exactly one | PASS |
+| Changed teaching content | “This is my page” remains | PASS |
+| Changed skip link | Present and targets `#main-content` | PASS |
+| Changed Tab traversal | First Tab focuses skip link | PASS |
+| Visible focus | Indicator styled and link rectangle inside viewport | PASS |
+| Enter activation | Fragment becomes `#main-content` | PASS |
+| Main focus | Main landmark receives focus | PASS |
 | Positive tabindex | None | PASS |
-| Browser errors | None | PASS |
-| Exit status | 0 | PASS |
+| Local server errors | None | PASS |
+| Browser, console, and request errors | None | PASS |
+| Test exit status | 0 | PASS |
