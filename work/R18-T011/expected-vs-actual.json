@@ -1,0 +1,120 @@
+[
+  {
+    "check_id": "CHK-01",
+    "name": "Page Title Check",
+    "type": "DOM",
+    "expected": "Bad semantics example",
+    "actual": "Bad semantics example",
+    "status": "PASS",
+    "details": "Document title accurately matches the target page."
+  },
+  {
+    "check_id": "CHK-02",
+    "name": "Skip Link Presence",
+    "type": "DOM",
+    "expected": 1,
+    "actual": 1,
+    "status": "PASS",
+    "details": "Exactly one a.skip-link element exists in the document."
+  },
+  {
+    "check_id": "CHK-03",
+    "name": "Skip Link Href Target",
+    "type": "DOM",
+    "expected": "#main",
+    "actual": "#main",
+    "status": "PASS",
+    "details": "Skip link anchor references the main content container (#main)."
+  },
+  {
+    "check_id": "CHK-04",
+    "name": "Main Target Presence and Semantics",
+    "type": "DOM",
+    "expected": {
+      "count": 1,
+      "tag": "main",
+      "tabindex": "-1"
+    },
+    "actual": {
+      "count": 1,
+      "tag": "main",
+      "tabindex": "-1"
+    },
+    "status": "PASS",
+    "details": "Main content region is wrapped in <main id=\"main\" tabindex=\"-1\">."
+  },
+  {
+    "check_id": "CHK-05",
+    "name": "Retained Teaching Purpose",
+    "type": "DOM",
+    "expected": {
+      "heading_font_tag": 1,
+      "subheading_font_tags": 2
+    },
+    "actual": {
+      "heading_font_tag": 1,
+      "subheading_font_tags": 2
+    },
+    "status": "PASS",
+    "details": "Demonstration bad-semantics tags (<font size=\"7\">, <font size=\"5\">) are preserved."
+  },
+  {
+    "check_id": "CHK-06",
+    "name": "Demonstrated CSS Layout Preserved (Unfocused)",
+    "type": "Computed Layout",
+    "expected": {
+      "skip_link_visible": false,
+      "heading_y_offset": "<= 30px"
+    },
+    "actual": {
+      "skip_link_visible": false,
+      "heading_y_offset": "16px"
+    },
+    "status": "PASS",
+    "details": "Skip link is visually clipped/off-screen; heading layout is unchanged from baseline."
+  },
+  {
+    "check_id": "CHK-07",
+    "name": "Tab Traversal to Interactive Control",
+    "type": "Keyboard Interaction",
+    "expected": "A.skip-link",
+    "actual": "A.skip-link",
+    "status": "PASS",
+    "details": "Pressing Tab immediately focuses the skip link."
+  },
+  {
+    "check_id": "CHK-08",
+    "name": "Visible Focus Indication",
+    "type": "Computed Layout & Style",
+    "expected": {
+      "in_viewport": true,
+      "outline_or_border": true,
+      "visibility": "visible"
+    },
+    "actual": {
+      "in_viewport": true,
+      "outline_or_border": true,
+      "visibility": "visible"
+    },
+    "status": "PASS",
+    "details": "Skip link displays with high contrast, 2px white border, and 3px blue outline on focus."
+  },
+  {
+    "check_id": "CHK-09",
+    "name": "Keyboard Activation URL Hash",
+    "type": "Event Effect",
+    "expected": "#main",
+    "actual": "#main",
+    "status": "PASS",
+    "details": "Pressing Enter updates the browser URL hash to #main."
+  },
+  {
+    "check_id": "CHK-10",
+    "name": "Keyboard Activation Focus Transfer",
+    "type": "Event Effect",
+    "expected": "main",
+    "actual": "main",
+    "status": "PASS",
+    "details": "Focus is transferred to the main content container (#main) upon activation."
+  }
+]
