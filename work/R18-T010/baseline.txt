@@ -1,0 +1,15 @@
+R18-T010 baseline
+
+Initial heroes.html state:
+- The header was empty.
+- The section was empty.
+- No JavaScript was present to load or display superhero data.
+
+Expected behavior, based on heroes-finished.html:
+- Display the Super Hero Squad heading.
+- Display its hometown and formation year.
+- Display three hero cards in one row.
+- Each card displays the hero's name, secret identity, age, and superpowers.
+
+Reference data: javascript/oojs/json/superheroes.json
+Reference implementation: javascript/oojs/json/heroes-finished.html

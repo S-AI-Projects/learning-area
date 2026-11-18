@@ -1,0 +1,7 @@
+R18-T010 regression test
+Correct page: PASS
+Deliberately broken CSS fixture: detected
+Baseline layout: {"heading":"Super Hero Squad","headerDetails":"Hometown: Metro City // Formed: 2016","count":3,"names":["Molecule Man","Madame Uppercut","Eternal Flame"],"sameRow":true,"positions":[{"x":240,"y":235,"width":264},{"x":504,"y":235,"width":264},{"x":768,"y":235,"width":264}]}
+Mutated layout: {"heading":"Super Hero Squad","headerDetails":"Hometown: Metro City // Formed: 2016","count":3,"names":["Molecule Man","Madame Uppercut","Eternal Flame"],"sameRow":false,"positions":[{"x":240,"y":235,"width":800},{"x":240,"y":481,"width":800},{"x":240,"y":727,"width":800}]}
+Page errors: none
+Result: PASS
