@@ -1,0 +1,4 @@
+PASS: Failed image request retains descriptive alternative text.
+PASS: Image loads successfully after the request is restored.
+PASS: Mozilla link has the expected destination.
+PASS: No unexpected page errors.
