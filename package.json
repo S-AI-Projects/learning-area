@@ -1,0 +1,27 @@
+{
+  "name": "learning-area",
+  "version": "1.0.0",
+  "description": "Welcome to the GitHub repository for the [MDN Learning Area](https://developer.mozilla.org/en-US/Learn).",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giteshpatil23/learning-area.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/giteshpatil23/learning-area/issues"
+  },
+  "homepage": "https://github.com/giteshpatil23/learning-area#readme",
+  "devDependencies": {
+    "playwright": "^1.65.1"
+  }
+}
