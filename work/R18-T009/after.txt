@@ -1,0 +1,9 @@
+R18-T009 regression test
+Node: v26.12.1
+Playwright: 1.65.1
+Browser: Chromium
+Reduced motion: emulated and verified
+Static image state: [{"visible":true,"animationName":"none","transitionDuration":"0s"},{"visible":true,"animationName":"none","transitionDuration":"0s"},{"visible":true,"animationName":"none","transitionDuration":"0s"}]
+Keyboard focus at 768px and 1280px: [{"width":768,"id":"alice-container","outlineStyle":"solid","outlineWidth":"3px","visible":true},{"width":768,"id":"alice1","outlineStyle":"solid","outlineWidth":"3px","visible":true},{"width":768,"id":"alice2","outlineStyle":"solid","outlineWidth":"3px","visible":true},{"width":768,"id":"alice3","outlineStyle":"solid","outlineWidth":"3px","visible":true},{"width":1280,"id":"alice-container","outlineStyle":"solid","outlineWidth":"3px","visible":true},{"width":1280,"id":"alice1","outlineStyle":"solid","outlineWidth":"3px","visible":true},{"width":1280,"id":"alice2","outlineStyle":"solid","outlineWidth":"3px","visible":true},{"width":1280,"id":"alice3","outlineStyle":"solid","outlineWidth":"3px","visible":true}]
+Page errors: []
+Result: PASS

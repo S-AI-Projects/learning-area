@@ -1,0 +1,1 @@
+Baseline: original page has three static Alice images arranged in a diagonal CSS grid. JavaScript defines animation keyframes and timing but does not call animate(). No elements are keyboard-focusable, and no visible focus styles or reduced-motion rules are present.
