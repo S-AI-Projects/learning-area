@@ -44,36 +44,38 @@
         <br><br>
         Bears can also be classified in terms of their habitat — both large and medium bears are just as at home in urban areas as they are in the countryside. Different habitats encourange different behaviour however, as you'll find out below. The below table also gives you some useful facts about bears.
         <br><br>
-        <table>
-          <thead>
-            <tr>
-              <td>Bear Type</td>
-              <td>Coat</td>
-              <td>Adult size</td>
-              <td>Habitat</td>
-              <td>Lifespan</td>
-              <td>Diet</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Wild</td>
-              <td>Brown or black</td>
-              <td>1.4 to 2.8 meters</td>
-              <td>Woods and forests</td>
-              <td>25 to 28 years</td>
-              <td>Fish, meat, plants</td>
-            </tr>
-            <tr>
-              <td>Urban</td>
-              <td>North Face</td>
-              <td>18 to 22</td>
-              <td>Condos and coffee shops</td>
-              <td>20 to 32 years</td>
-              <td>Starbucks, sushi</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-container" role="region" aria-label="Bear facts table" tabindex="0">
+          <table>
+            <thead>
+              <tr>
+                <td>Bear Type</td>
+                <td>Coat</td>
+                <td>Adult size</td>
+                <td>Habitat</td>
+                <td>Lifespan</td>
+                <td>Diet</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Wild</td>
+                <td>Brown or black</td>
+                <td>1.4 to 2.8 meters</td>
+                <td>Woods and forests</td>
+                <td>25 to 28 years</td>
+                <td>Fish, meat, plants</td>
+              </tr>
+              <tr>
+                <td>Urban</td>
+                <td>North Face</td>
+                <td>18 to 22</td>
+                <td>Condos and coffee shops</td>
+                <td>20 to 32 years</td>
+                <td>Starbucks, sushi</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
         <font size="5">Habitats and Eating habits</font>
         <br><br>
@@ -109,7 +111,7 @@
 
         </aside>
         <section class="comments">
-          <div class="show-hide">Show comments</div>
+          <button type="button" class="show-hide">Show comments</button>
 
           <div class="comment-wrapper">
 
@@ -117,11 +119,11 @@
 
             <form class="comment-form">
               <div class="flex-pair">
-                Your name:
+                <label for="name">Your name:</label>
                 <input type="text" name="name" id="name" placeholder="Enter your name">
               </div>
               <div class="flex-pair">
-                Your comment:
+                <label for="comment">Your comment:</label>
                 <input type="text" name="comment" id="comment" placeholder="Enter your comment">
               </div>
               <div>

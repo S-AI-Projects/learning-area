@@ -1,0 +1,48 @@
+{
+  "test_id": "R18-T012",
+  "document_path": "accessibility/assessment-start/index.html",
+  "linked_assets": [
+    "accessibility/assessment-start/style.css",
+    "accessibility/assessment-start/main.js"
+  ],
+  "local_server": {
+    "command": "python3 -m http.server 8000 --bind 127.0.0.1",
+    "host": "127.0.0.1",
+    "port": 8000,
+    "endpoint": "http://127.0.0.1:8000/accessibility/assessment-start/index.html"
+  },
+  "viewports": [
+    {
+      "name": "mobile",
+      "width": 360,
+      "height": 800,
+      "is_mobile": true,
+      "has_touch": true
+    },
+    {
+      "name": "desktop",
+      "width": 1280,
+      "height": 800,
+      "is_mobile": false,
+      "has_touch": false
+    }
+  ],
+  "source_anchors": [
+    {
+      "id": "name",
+      "selector": "#name",
+      "associated_label": "label[for=\"name\"]"
+    },
+    {
+      "id": "comment",
+      "selector": "#comment",
+      "associated_label": "label[for=\"comment\"]"
+    }
+  ],
+  "stubs": [
+    {
+      "target": "window.HTMLMediaElement.prototype.play",
+      "purpose": "Isolate hardware/audio playback permissions during automated regression"
+    }
+  ]
+}
