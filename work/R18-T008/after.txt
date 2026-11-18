@@ -1,0 +1,11 @@
+R18-T008 regression test
+Node: v26.12.1
+Playwright: 1.65.1
+Chromium: 159.0.8154.6
+Input: <img src=x onerror="alert(1)">
+Expected: literal text, no img element, no alert, visible block output
+Actual: {"display":"block","visible":true,"text":"<img src=x onerror=\"alert(1)\">"}
+Injected image count: 0
+Alert count: 0
+Page errors: []
+Result: PASS

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Safe text rendering example</title>
+</head>
+<body>
+  <main>
+    <h1>Safe text rendering</h1>
+    <label for="user-text">Enter text:</label>
+    <input id="user-text" type="text">
+    <button id="show-text" type="button">Display text</button>
+    <p id="output" aria-live="polite"></p>
+  </main>
+
+  <script>
+    const input = document.querySelector("#user-text");
+    const button = document.querySelector("#show-text");
+    const output = document.querySelector("#output");
+
+    button.addEventListener("click", () => {
+      output.textContent = input.value;
+    });
+  </script>
+</body>
+</html>
