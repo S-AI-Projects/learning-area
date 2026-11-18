@@ -2,25 +2,73 @@
 <html lang="en-US">
   <head>
     <meta charset="utf-8">
-
     <title>Our superheroes</title>
-
     <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
+    <header></header>
+    <section></section>
 
-      <header>
+    <script>
+      async function populate() {
+        const response = await fetch('superheroes.json');
+        const superHeroes = await response.json();
 
-      </header>
+        populateHeader(superHeroes);
+        populateHeroes(superHeroes);
+      }
 
-      <section>
+      function populateHeader(obj) {
+        const header = document.querySelector('header');
 
-      </section>
+        const heading = document.createElement('h1');
+        heading.textContent = obj.squadName;
+        header.appendChild(heading);
 
-      <script>
+        const paragraph = document.createElement('p');
+        paragraph.textContent =
+          `Hometown: ${obj.homeTown} // Formed: ${obj.formed}`;
+        header.appendChild(paragraph);
+      }
 
-      </script>
+      function populateHeroes(obj) {
+        const section = document.querySelector('section');
+
+        for (const hero of obj.members) {
+          const article = document.createElement('article');
+
+          const heading = document.createElement('h2');
+          heading.textContent = hero.name;
+          article.appendChild(heading);
+
+          const identity = document.createElement('p');
+          identity.textContent = `Secret identity: ${hero.secretIdentity}`;
+          article.appendChild(identity);
+
+          const age = document.createElement('p');
+          age.textContent = `Age: ${hero.age}`;
+          article.appendChild(age);
+
+          const powersLabel = document.createElement('p');
+          powersLabel.textContent = 'Superpowers:';
+          article.appendChild(powersLabel);
+
+          const list = document.createElement('ul');
+
+          for (const power of hero.powers) {
+            const item = document.createElement('li');
+            item.textContent = power;
+            list.appendChild(item);
+          }
+
+          article.appendChild(list);
+          section.appendChild(article);
+        }
+      }
+
+      populate();
+    </script>
   </body>
 </html>
