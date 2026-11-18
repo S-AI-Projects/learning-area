@@ -2,7 +2,7 @@ body {
   background: #6c373f;
   display: flex;
   justify-content: center;
-  }
+}
 
 #alice-container {
   width: 90vh;
@@ -24,4 +24,22 @@ body {
 
 #alice3 {
   grid-area: a3;
+}
+
+#alice-container img:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #alice-container,
+  #alice-container img {
+    animation: none;
+    transition: none;
+  }
+}
+
+#alice-container:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 6px;
 }
