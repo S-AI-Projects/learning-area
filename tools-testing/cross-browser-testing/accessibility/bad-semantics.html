@@ -4,20 +4,62 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Bad semantics example</title>
+    <style>
+      .skip-link {
+        position: absolute;
+        top: -1000px;
+        left: -1000px;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        white-space: nowrap;
+      }
+
+      .skip-link:focus {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: auto;
+        height: auto;
+        overflow: visible;
+        clip: auto;
+        clip-path: none;
+        white-space: normal;
+        padding: 8px 16px;
+        background-color: #000000;
+        color: #ffffff;
+        font-family: sans-serif;
+        font-size: 1rem;
+        font-weight: bold;
+        text-decoration: underline;
+        border: 2px solid #ffffff;
+        outline: 3px solid #005a9c;
+        z-index: 10000;
+      }
+
+      #main:focus {
+        outline: none;
+      }
+    </style>
   </head>
   <body>
-    <font size="7">My heading</font>
-    <br><br>
-    This is the first section of my document.
-    <br><br>
-    I'll add another paragraph here too.
-    <br><br>
-    <font size="5">My subheading</font>
-    <br><br>
-    This is the first subsection of my document. I'd love people to be able to find this content!
-    <br><br>
-    <font size="5">My 2nd subheading</font>
-    <br><br>
-    This is the second subsection of my content. I think is more interesting than the last one.
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <main id="main" tabindex="-1">
+      <font size="7">My heading</font>
+      <br><br>
+      This is the first section of my document.
+      <br><br>
+      I'll add another paragraph here too.
+      <br><br>
+      <font size="5">My subheading</font>
+      <br><br>
+      This is the first subsection of my document. I'd love people to be able to find this content!
+      <br><br>
+      <font size="5">My 2nd subheading</font>
+      <br><br>
+      This is the second subsection of my content. I think is more interesting than the last one.
+    </main>
   </body>
 </html>

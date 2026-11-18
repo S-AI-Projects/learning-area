@@ -1,0 +1,35 @@
+{
+  "test_id": "R18-T011",
+  "document_path": "tools-testing/cross-browser-testing/accessibility/bad-semantics.html",
+  "local_server": {
+    "command": "python3 -m http.server 8000 --bind 127.0.0.1",
+    "host": "127.0.0.1",
+    "default_port": 8000,
+    "readiness_endpoint": "http://127.0.0.1:8000/tools-testing/cross-browser-testing/accessibility/bad-semantics.html"
+  },
+  "browser_context": {
+    "engine": "chromium",
+    "headless": true,
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "interactive_controls": [
+    {
+      "selector": "a.skip-link",
+      "href": "#main",
+      "target_id": "main"
+    }
+  ],
+  "keyboard_inputs": [
+    {
+      "key": "Tab",
+      "purpose": "Focus the skip-to-content link"
+    },
+    {
+      "key": "Enter",
+      "purpose": "Activate the skip-to-content link and jump to main content"
+    }
+  ]
+}
