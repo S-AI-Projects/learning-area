@@ -1,0 +1,44 @@
+{
+  "test_id": "R18-T013",
+  "document_path": "html/tables/advanced/items-sold.html",
+  "fixture_path": "html/tables/advanced/fixtures/items-sold-empty.html",
+  "linked_assets": [
+    "html/tables/advanced/minimal-table.css",
+    "html/tables/advanced/sales-report-icon.png"
+  ],
+  "local_server": {
+    "command": "python3 -m http.server 8000 --bind 127.0.0.1",
+    "host": "127.0.0.1",
+    "port": 8000,
+    "target_endpoint": "http://127.0.0.1:8000/html/tables/advanced/items-sold.html",
+    "fixture_endpoint": "http://127.0.0.1:8000/html/tables/advanced/fixtures/items-sold-empty.html"
+  },
+  "scenarios": [
+    {
+      "name": "baseline_rendered_table",
+      "expected_rows": 5
+    },
+    {
+      "name": "failed_asset_fallback",
+      "target_asset": "sales-report-icon.png",
+      "action": "route_abort",
+      "fallback_selector": "#icon-fallback"
+    },
+    {
+      "name": "input_empty_state",
+      "filter_input_selector": "#table-filter",
+      "invalid_input": "NonexistentLocation123",
+      "expected_empty_message": "No matching sales records found."
+    },
+    {
+      "name": "input_recovery",
+      "valid_input": "Belgium",
+      "expected_visible_rows": 3
+    },
+    {
+      "name": "static_empty_fixture",
+      "fixture_selector": ".empty-state-row td.empty-message",
+      "expected_colspan": "7"
+    }
+  ]
+}

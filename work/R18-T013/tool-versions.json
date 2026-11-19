@@ -1,0 +1,9 @@
+{
+  "test_id": "R18-T013",
+  "node": ">=18.0.0 (tested with Node.js LTS)",
+  "playwright": ">=1.40.0",
+  "python": "3.14.0",
+  "operating_system": "Darwin 25.1.0 arm64 (macOS)",
+  "browser": "Chromium (Playwright bundled)",
+  "local_server_binary": "python3 -m http.server"
+}
