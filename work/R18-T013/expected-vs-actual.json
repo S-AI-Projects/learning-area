@@ -1,0 +1,92 @@
+[
+  {
+    "check_id": "CHK-01",
+    "name": "Page Title Verification",
+    "type": "DOM",
+    "expected": "Items sold summary",
+    "actual": "Items sold summary",
+    "status": "PASS",
+    "details": "Document title accurately matches expected page title."
+  },
+  {
+    "check_id": "CHK-02",
+    "name": "Table Caption Verification",
+    "type": "DOM",
+    "expected": "Items Sold August 2016",
+    "actual": "Items Sold August 2016",
+    "status": "PASS",
+    "details": "Table caption correctly defines the reporting scope."
+  },
+  {
+    "check_id": "CHK-03",
+    "name": "Baseline Data Row Count",
+    "type": "DOM Structure",
+    "expected": 5,
+    "actual": 5,
+    "status": "PASS",
+    "details": "All 5 original sales rows (Antwerp, Ghent, Brussels, Amsterdam, Utrecht) are present."
+  },
+  {
+    "check_id": "CHK-04",
+    "name": "Failed Asset Readable Fallback Active",
+    "type": "Asset Fallback & Layout",
+    "expected": true,
+    "actual": true,
+    "status": "PASS",
+    "details": "When image request is aborted, fallback element is displayed with valid dimensions."
+  },
+  {
+    "check_id": "CHK-05",
+    "name": "Asset Restoration Recovery",
+    "type": "Asset Recovery",
+    "expected": true,
+    "actual": true,
+    "status": "PASS",
+    "details": "Upon unrouting and reloading, original image asset renders with naturalWidth > 0."
+  },
+  {
+    "check_id": "CHK-06",
+    "name": "Meaningful Empty State on Invalid Input",
+    "type": "Event & State",
+    "expected": "No matching sales records found.",
+    "actual": "No matching sales records found.",
+    "status": "PASS",
+    "details": "Typing unmatched text into filter hides all data rows and presents the empty state row."
+  },
+  {
+    "check_id": "CHK-07",
+    "name": "Recovery After Valid Input",
+    "type": "Event & State Recovery",
+    "expected": true,
+    "actual": true,
+    "status": "PASS",
+    "details": "Entering matching filter text ('Belgium') recovers matching data rows and hides the empty row."
+  },
+  {
+    "check_id": "CHK-08",
+    "name": "Static Empty Result Fixture Structure",
+    "type": "Fixture Verification",
+    "expected": "colspan=7 with descriptive text",
+    "actual": "colspan=7 with descriptive text",
+    "status": "PASS",
+    "details": "Fixture items-sold-empty.html renders complete table structure with empty-state row spanning all 7 columns."
+  },
+  {
+    "check_id": "CHK-09",
+    "name": "Restored Fixture Data Recovery",
+    "type": "Fixture State Recovery",
+    "expected": 5,
+    "actual": 5,
+    "status": "PASS",
+    "details": "Navigating back from fixture to standard table recovers full 5 data rows."
+  },
+  {
+    "check_id": "CHK-10",
+    "name": "Zero Page Errors Rejection",
+    "type": "Console & Runtime",
+    "expected": 0,
+    "actual": 0,
+    "status": "PASS",
+    "details": "No uncaught runtime errors or unhandled rejections occurred."
+  }
+]

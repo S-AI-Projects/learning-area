@@ -8,7 +8,16 @@
   </head>
 
 <body>
-    <h1>Items sold summary</h1>
+    <h1>
+      <img src="sales-report-icon.png" alt="Sales Report Icon" class="report-icon" onerror="this.style.display='none'; document.getElementById('icon-fallback').style.display='inline-block';">
+      <span id="icon-fallback" class="icon-fallback" style="display:none;" aria-label="Sales Report">📊</span>
+      Items sold summary
+    </h1>
+
+    <div class="table-controls">
+      <label for="table-filter">Filter records:</label>
+      <input type="search" id="table-filter" placeholder="Search country or city...">
+    </div>
 
     <table>
       <caption>Items Sold August 2016</caption>
@@ -69,9 +78,38 @@
           <td>36</td>
           <td>19</td>
         </tr>
+        <tr id="empty-state-row" class="empty-state" style="display: none;">
+          <td colspan="7">No matching sales records found.</td>
+        </tr>
       </tbody>
     </table>
 
+    <script>
+      const filterInput = document.getElementById('table-filter');
+      const rows = document.querySelectorAll('tbody tr:not(#empty-state-row)');
+      const emptyRow = document.getElementById('empty-state-row');
+
+      if (filterInput) {
+        filterInput.addEventListener('input', function() {
+          const q = this.value.trim().toLowerCase();
+          let visibleCount = 0;
+          rows.forEach(row => {
+            const text = row.textContent.toLowerCase();
+            if (text.includes(q)) {
+              row.style.display = '';
+              visibleCount++;
+            } else {
+              row.style.display = 'none';
+            }
+          });
+          if (visibleCount === 0) {
+            emptyRow.style.display = '';
+          } else {
+            emptyRow.style.display = 'none';
+          }
+        });
+      }
+    </script>
 </body>
 
 </html>
