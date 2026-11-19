@@ -1,0 +1,158 @@
+[
+  {
+    "check_id": "CHK-01",
+    "name": "Mobile (360px) Unintended Page Horizontal Overflow",
+    "type": "Computed Layout",
+    "viewport": "360x800",
+    "expected": {
+      "hasOverflow": false,
+      "maxScrollWidth": 360
+    },
+    "actual": {
+      "hasOverflow": false,
+      "maxScrollWidth": 360
+    },
+    "status": "PASS",
+    "details": "document.documentElement.scrollWidth equals window.innerWidth (360px); zero horizontal page scrolling."
+  },
+  {
+    "check_id": "CHK-02",
+    "name": "Intentional Scroll Region Labelled and Accessible",
+    "type": "DOM & Accessibility",
+    "viewport": "360x800",
+    "expected": {
+      "role": "region",
+      "ariaLabel": "Bear facts table",
+      "tabindex": "0",
+      "overflowX": "auto"
+    },
+    "actual": {
+      "role": "region",
+      "ariaLabel": "Bear facts table",
+      "tabindex": "0",
+      "overflowX": "auto"
+    },
+    "status": "PASS",
+    "details": "The data table container is the only scrollable demonstration, properly labelled and keyboard scrollable."
+  },
+  {
+    "check_id": "CHK-03",
+    "name": "Mobile Content Order (Article before Secondary)",
+    "type": "Visual Hierarchy & Layout",
+    "viewport": "360x800",
+    "expected": "article.y < secondary.y",
+    "actual": "article.y < secondary.y",
+    "status": "PASS",
+    "details": "Main content stacks vertically with article above related links (secondary)."
+  },
+  {
+    "check_id": "CHK-04",
+    "name": "Mobile Controls (#name, #comment) Usable & Unclipped",
+    "type": "Computed Layout",
+    "viewport": "360x800",
+    "expected": {
+      "name_width": ">= 120px",
+      "name_clipped": false,
+      "comment_width": ">= 120px",
+      "comment_clipped": false,
+      "submit_clipped": false
+    },
+    "actual": {
+      "name_width": "260px",
+      "name_clipped": false,
+      "comment_width": "260px",
+      "comment_clipped": false,
+      "submit_clipped": false
+    },
+    "status": "PASS",
+    "details": "#name and #comment fit comfortably within the 360px viewport without clipping or compression."
+  },
+  {
+    "check_id": "CHK-05",
+    "name": "Accessible Labels Associated with #name and #comment",
+    "type": "DOM & Semantics",
+    "viewport": "360x800",
+    "expected": {
+      "label_name_count": 1,
+      "label_comment_count": 1
+    },
+    "actual": {
+      "label_name_count": 1,
+      "label_comment_count": 1
+    },
+    "status": "PASS",
+    "details": "Labels are explicitly linked via for=\"name\" and for=\"comment\" attributes."
+  },
+  {
+    "check_id": "CHK-06",
+    "name": "Comment Form Event Effects & DOM Update",
+    "type": "Event Effect",
+    "viewport": "360x800",
+    "expected": {
+      "appends_comment": true,
+      "clears_inputs": true
+    },
+    "actual": {
+      "appends_comment": true,
+      "clears_inputs": true
+    },
+    "status": "PASS",
+    "details": "Form submission properly appends new comment to .comment-container and resets input fields."
+  },
+  {
+    "check_id": "CHK-07",
+    "name": "Desktop (1280px) No Unintended Horizontal Overflow",
+    "type": "Computed Layout",
+    "viewport": "1280x800",
+    "expected": {
+      "hasOverflow": false
+    },
+    "actual": {
+      "hasOverflow": false
+    },
+    "status": "PASS",
+    "details": "Desktop layout renders cleanly with zero horizontal overflow."
+  },
+  {
+    "check_id": "CHK-08",
+    "name": "Desktop Column Layout (Side-by-side)",
+    "type": "Computed Layout",
+    "viewport": "1280x800",
+    "expected": {
+      "article_left_of_secondary": true,
+      "aligned_top": true
+    },
+    "actual": {
+      "article_left_of_secondary": true,
+      "aligned_top": true
+    },
+    "status": "PASS",
+    "details": "Article (flex: 5) and secondary (flex: 2) maintain a two-column desktop layout."
+  },
+  {
+    "check_id": "CHK-09",
+    "name": "Desktop Controls (#name, #comment) Within Viewport",
+    "type": "Computed Layout",
+    "viewport": "1280x800",
+    "expected": {
+      "within_viewport": true,
+      "usable": true
+    },
+    "actual": {
+      "within_viewport": true,
+      "usable": true
+    },
+    "status": "PASS",
+    "details": "Controls are positioned within normal flow and fully accessible."
+  },
+  {
+    "check_id": "CHK-10",
+    "name": "Zero Page Errors Rejection",
+    "type": "Console & Runtime",
+    "viewport": "Both",
+    "expected": 0,
+    "actual": 0,
+    "status": "PASS",
+    "details": "Zero unexpected console/page errors occurred during all tests."
+  }
+]
