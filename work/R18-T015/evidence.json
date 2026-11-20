@@ -1,0 +1,383 @@
+{
+  "task": "R18-T015",
+  "input": {
+    "pagePath": "css/css-layout/legacy/html-skeleton-finished.html",
+    "viewports": [
+      {
+        "width": 1280,
+        "height": 900
+      },
+      {
+        "width": 390,
+        "height": 844
+      },
+      {
+        "width": 1280,
+        "height": 900
+      }
+    ]
+  },
+  "expected": "All strict browser assertions pass and no unexpected page errors occur.",
+  "actual": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "observation": {
+        "container": {
+          "x": 160,
+          "width": 960
+        },
+        "rows": [
+          [
+            {
+              "text": "1",
+              "x": 160,
+              "y": 0,
+              "width": 45
+            },
+            {
+              "text": "2",
+              "x": 243,
+              "y": 0,
+              "width": 45
+            },
+            {
+              "text": "3",
+              "x": 326,
+              "y": 0,
+              "width": 45
+            },
+            {
+              "text": "4",
+              "x": 410,
+              "y": 0,
+              "width": 45
+            },
+            {
+              "text": "5",
+              "x": 493,
+              "y": 0,
+              "width": 45
+            },
+            {
+              "text": "6",
+              "x": 576,
+              "y": 0,
+              "width": 45
+            },
+            {
+              "text": "7",
+              "x": 659,
+              "y": 0,
+              "width": 45
+            },
+            {
+              "text": "8",
+              "x": 742,
+              "y": 0,
+              "width": 45
+            },
+            {
+              "text": "9",
+              "x": 826,
+              "y": 0,
+              "width": 45
+            },
+            {
+              "text": "10",
+              "x": 909,
+              "y": 0,
+              "width": 45
+            },
+            {
+              "text": "11",
+              "x": 992,
+              "y": 0,
+              "width": 45
+            },
+            {
+              "text": "12",
+              "x": 1075,
+              "y": 0,
+              "width": 45
+            }
+          ],
+          [
+            {
+              "text": "13",
+              "x": 160,
+              "y": 24,
+              "width": 45
+            },
+            {
+              "text": "14",
+              "x": 243,
+              "y": 24,
+              "width": 461
+            },
+            {
+              "text": "15",
+              "x": 742,
+              "y": 24,
+              "width": 211
+            },
+            {
+              "text": "16",
+              "x": 992,
+              "y": 24,
+              "width": 128
+            }
+          ]
+        ],
+        "scrollWidth": 1280,
+        "headings": [],
+        "externalRequests": []
+      },
+      "pageErrors": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "observation": {
+        "container": {
+          "x": 0,
+          "width": 390
+        },
+        "rows": [
+          [
+            {
+              "text": "1",
+              "x": 20,
+              "y": 0,
+              "width": 350
+            },
+            {
+              "text": "2",
+              "x": 20,
+              "y": 24,
+              "width": 350
+            },
+            {
+              "text": "3",
+              "x": 20,
+              "y": 48,
+              "width": 350
+            },
+            {
+              "text": "4",
+              "x": 20,
+              "y": 72,
+              "width": 350
+            },
+            {
+              "text": "5",
+              "x": 20,
+              "y": 96,
+              "width": 350
+            },
+            {
+              "text": "6",
+              "x": 20,
+              "y": 120,
+              "width": 350
+            },
+            {
+              "text": "7",
+              "x": 20,
+              "y": 144,
+              "width": 350
+            },
+            {
+              "text": "8",
+              "x": 20,
+              "y": 168,
+              "width": 350
+            },
+            {
+              "text": "9",
+              "x": 20,
+              "y": 192,
+              "width": 350
+            },
+            {
+              "text": "10",
+              "x": 20,
+              "y": 216,
+              "width": 350
+            },
+            {
+              "text": "11",
+              "x": 20,
+              "y": 240,
+              "width": 350
+            },
+            {
+              "text": "12",
+              "x": 20,
+              "y": 264,
+              "width": 350
+            }
+          ],
+          [
+            {
+              "text": "13",
+              "x": 20,
+              "y": 288,
+              "width": 350
+            },
+            {
+              "text": "14",
+              "x": 20,
+              "y": 312,
+              "width": 350
+            },
+            {
+              "text": "15",
+              "x": 20,
+              "y": 336,
+              "width": 350
+            },
+            {
+              "text": "16",
+              "x": 20,
+              "y": 360,
+              "width": 350
+            }
+          ]
+        ],
+        "scrollWidth": 390,
+        "headings": [],
+        "externalRequests": []
+      },
+      "pageErrors": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "observation": {
+        "container": {
+          "x": 160,
+          "width": 960
+        },
+        "rows": [
+          [
+            {
+              "text": "1",
+              "x": 160,
+              "y": 0,
+              "width": 45
+            },
+            {
+              "text": "2",
+              "x": 243,
+              "y": 0,
+              "width": 45
+            },
+            {
+              "text": "3",
+              "x": 326,
+              "y": 0,
+              "width": 45
+            },
+            {
+              "text": "4",
+              "x": 410,
+              "y": 0,
+              "width": 45
+            },
+            {
+              "text": "5",
+              "x": 493,
+              "y": 0,
+              "width": 45
+            },
+            {
+              "text": "6",
+              "x": 576,
+              "y": 0,
+              "width": 45
+            },
+            {
+              "text": "7",
+              "x": 659,
+              "y": 0,
+              "width": 45
+            },
+            {
+              "text": "8",
+              "x": 742,
+              "y": 0,
+              "width": 45
+            },
+            {
+              "text": "9",
+              "x": 826,
+              "y": 0,
+              "width": 45
+            },
+            {
+              "text": "10",
+              "x": 909,
+              "y": 0,
+              "width": 45
+            },
+            {
+              "text": "11",
+              "x": 992,
+              "y": 0,
+              "width": 45
+            },
+            {
+              "text": "12",
+              "x": 1075,
+              "y": 0,
+              "width": 45
+            }
+          ],
+          [
+            {
+              "text": "13",
+              "x": 160,
+              "y": 24,
+              "width": 45
+            },
+            {
+              "text": "14",
+              "x": 243,
+              "y": 24,
+              "width": 461
+            },
+            {
+              "text": "15",
+              "x": 742,
+              "y": 24,
+              "width": 211
+            },
+            {
+              "text": "16",
+              "x": 992,
+              "y": 24,
+              "width": 128
+            }
+          ]
+        ],
+        "scrollWidth": 1280,
+        "headings": [],
+        "externalRequests": []
+      },
+      "pageErrors": []
+    }
+  ],
+  "tools": {
+    "node": "v26.13.1",
+    "playwright": "1.65.1",
+    "chromium": "159.0.8154.6"
+  },
+  "localServer": "http://127.0.0.1:49675"
+}
