@@ -1,0 +1,46 @@
+{
+  "task": "R18-T018",
+  "input": {
+    "pagePath": "javascript/introduction-to-js-1/troubleshooting/number-game-errors.html",
+    "viewports": [
+      {
+        "width": 1280,
+        "height": 900
+      }
+    ]
+  },
+  "expected": "All strict browser assertions pass and no unexpected page errors occur.",
+  "actual": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "observation": {
+        "baseline": {
+          "guessText": "",
+          "guessEnabled": true,
+          "submitEnabled": true
+        },
+        "payload": "<img src=x onerror=\"window.__xssTriggered=true\"> https://github.com/S-AI-Projects/learning-area/issues/x",
+        "afterPayload": {
+          "renderedLiterally": true,
+          "createdImageElements": 0,
+          "handlerExecuted": false,
+          "result": "Wrong!"
+        },
+        "regularGame": {
+          "deterministicWinningGuess": 43,
+          "resetRestoresNewGame": true
+        }
+      },
+      "pageErrors": []
+    }
+  ],
+  "tools": {
+    "node": "v26.13.1",
+    "playwright": "1.65.1",
+    "chromium": "159.0.8154.6"
+  },
+  "localServer": "http://127.0.0.1:49830"
+}
