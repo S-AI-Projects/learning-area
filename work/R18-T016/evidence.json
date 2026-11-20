@@ -1,0 +1,46 @@
+{
+  "task": "R18-T016",
+  "input": {
+    "pagePath": "html/forms/your-first-HTML-form/first-form.html",
+    "viewports": [
+      {
+        "width": 1280,
+        "height": 900
+      }
+    ]
+  },
+  "expected": "All strict browser assertions pass and no unexpected page errors occur.",
+  "actual": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "observation": {
+        "baselineBeforeChange": {
+          "inputType": "email",
+          "malformedAddressValid": false,
+          "unsupportedGuidance": false
+        },
+        "nativeEmail": {
+          "type": "email",
+          "invalidRejected": true,
+          "validAcceptedByConstraintApi": true
+        },
+        "unsupportedFallback": {
+          "type": "text",
+          "helpVisible": true,
+          "invalidSubmitPrevented": true,
+          "validSubmitAllowed": true
+        }
+      },
+      "pageErrors": []
+    }
+  ],
+  "tools": {
+    "node": "v26.13.1",
+    "playwright": "1.65.1",
+    "chromium": "159.0.8154.6"
+  },
+  "localServer": "http://127.0.0.1:49781"
+}

@@ -2,6 +2,7 @@
 <html lang="en-US">
 	<head>
 		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Your first HTML form</title>
 	</head>
 
@@ -13,8 +14,13 @@
 			</p>
 			<p>
 				<label for="mail">E-mail:</label>
-				<input type="email" id="mail" name="user_mail" />
+				<input type="email" id="mail" name="user_mail" required />
 			</p>
+			<p id="mail-help" hidden>
+				This browser does not validate email addresses automatically. Enter an address
+				in the format name@example.com; this page will check it before submission.
+			</p>
+			<p id="form-status" role="status" aria-live="polite"></p>
 			<p>
 				<label for="msg">Message:</label>
 				<textarea id="msg" name="user_message"></textarea>
@@ -23,5 +29,6 @@
 				<button type="submit">Send your message</button>
 			</p>
 		</form>
+		<script src="form-fallback.js" defer></script>
 	</body>
 </html>
