@@ -1,0 +1,17 @@
+{
+  "name": "learning-area-course-checks",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check:r18-t014": "node tests/course/r18-t014.mjs",
+    "check:r18-t015": "node tests/course/r18-t015.mjs",
+    "check:r18-t016": "node tests/course/r18-t016.mjs",
+    "check:r18-t017": "node tests/course/r18-t017.mjs",
+    "check:r18-t018": "node tests/course/r18-t018.mjs",
+    "check:r18-t019": "node tests/course/r18-t019.mjs",
+    "check:r18-t020": "node tests/course/r18-t020.mjs"
+  },
+  "devDependencies": {
+    "playwright": "latest"
+  }
+}
