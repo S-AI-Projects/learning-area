@@ -1,0 +1,50 @@
+{
+  "task": "R18-T017",
+  "input": {
+    "pagePath": "html/forms/toggle-switch-example/index.html",
+    "viewports": [
+      {
+        "width": 1280,
+        "height": 900
+      }
+    ]
+  },
+  "expected": "All strict browser assertions pass and no unexpected page errors occur.",
+  "actual": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "observation": {
+        "initial": {
+          "checked": false,
+          "trackColor": "rgb(238, 238, 238)",
+          "layout": {
+            "itemWidth": 100,
+            "inputWidth": 44
+          },
+          "onOpacity": "0",
+          "offOpacity": "1"
+        },
+        "checkedByPointer": {
+          "checked": true,
+          "trackColor": "rgb(255, 170, 0)",
+          "onOpacity": "1",
+          "offOpacity": "0"
+        },
+        "keyboardSpace": {
+          "checked": true,
+          "visibleLabel": "On"
+        }
+      },
+      "pageErrors": []
+    }
+  ],
+  "tools": {
+    "node": "v26.13.1",
+    "playwright": "1.65.1",
+    "chromium": "159.0.8154.6"
+  },
+  "localServer": "http://127.0.0.1:49808"
+}
