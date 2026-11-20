@@ -1,3 +1,6 @@
+// Keep initialization in a fresh scope so the teaching example can be loaded
+// again by demos and isolated browser harnesses without redeclaring globals.
+(() => {
 // functionality for showing/hiding the comments section
 
 const showHideBtn = document.querySelector('.show-hide');
@@ -45,3 +48,4 @@ function submitComment() {
   nameField.value = '';
   commentField.value = '';
 }
+})();

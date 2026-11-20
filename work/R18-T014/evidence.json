@@ -1,0 +1,40 @@
+{
+  "task": "R18-T014",
+  "input": {
+    "pagePath": "accessibility/assessment-finished/index.html",
+    "viewports": [
+      {
+        "width": 1280,
+        "height": 900
+      }
+    ]
+  },
+  "expected": "All strict browser assertions pass and no unexpected page errors occur.",
+  "actual": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "observation": {
+        "baseline": {
+          "commentCount": 1,
+          "wrapperDisplay": "none",
+          "toggleText": "Show comments"
+        },
+        "afterReinitialization": {
+          "commentCount": 2,
+          "insertedText": "Repeat check\n\nOne submission after reinitialization.",
+          "timersInSource": false
+        }
+      },
+      "pageErrors": []
+    }
+  ],
+  "tools": {
+    "node": "v26.13.1",
+    "playwright": "1.65.1",
+    "chromium": "159.0.8154.6"
+  },
+  "localServer": "http://127.0.0.1:49704"
+}
