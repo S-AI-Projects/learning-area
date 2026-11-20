@@ -4,11 +4,39 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Bad for loop</title>
+    <style>
+      .demo-paragraph {
+        display: block;
+        max-width: 100%;
+        margin: 1em 0;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        color: inherit;
+        text-align: left;
+        font: inherit;
+      }
+
+      .demo-paragraph:focus-visible {
+        outline: 3px solid #005fcc;
+        outline-offset: 2px;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .demo-paragraph {
+          scroll-behavior: auto;
+          animation: none;
+          transition: none;
+        }
+      }
+    </style>
   </head>
   <body>
     <script>
       for(var i = 1; i <= 10; i++) {
-        const para = document.createElement('p');
+        const para = document.createElement('button');
+        para.type = 'button';
+        para.className = 'demo-paragraph';
         para.textContent = 'This is paragraph ' + i + '.';
         document.body.appendChild(para);
         para.onclick = function() {
