@@ -1,0 +1,52 @@
+{
+  "task": "R18-T020",
+  "input": {
+    "pagePath": "javascript/oojs/tasks/json/json1.html",
+    "viewports": [
+      {
+        "width": 1280,
+        "height": 900
+      }
+    ],
+    "contextOptions": {}
+  },
+  "expected": "All strict browser assertions pass and no unexpected page errors occur.",
+  "actual": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "observation": {
+        "baseline": {
+          "resetLabel": "Reset",
+          "editorMatchesDefault": true,
+          "previewParagraphs": 2,
+          "previewText": "The mother cats are called"
+        },
+        "correctPage": {
+          "editorRestored": true,
+          "previewRestored": true
+        },
+        "mutation": {
+          "brokenBinding": "click changed to mouseover in a route-only temporary response fixture",
+          "expected": "Reset click restores the original editor contents",
+          "actual": "Edited code remains after clicking Reset",
+          "assertionDetectedDifference": true
+        },
+        "fixture": {
+          "url": "https://mdn.github.io/learning-area/javascript/oojs/tasks/json/sample.json",
+          "requests": 3,
+          "unexpectedExternalRequests": []
+        }
+      },
+      "pageErrors": []
+    }
+  ],
+  "tools": {
+    "node": "v26.13.1",
+    "playwright": "1.65.1",
+    "chromium": "159.0.8154.6"
+  },
+  "localServer": "http://127.0.0.1:49930"
+}
