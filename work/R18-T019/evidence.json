@@ -1,0 +1,72 @@
+{
+  "task": "R18-T019",
+  "input": {
+    "pagePath": "tools-testing/cross-browser-testing/javascript/bad-for-loop.html",
+    "viewports": [
+      {
+        "width": 390,
+        "height": 844
+      },
+      {
+        "width": 1280,
+        "height": 900
+      }
+    ],
+    "contextOptions": {
+      "reducedMotion": "reduce"
+    }
+  },
+  "expected": "All strict browser assertions pass and no unexpected page errors occur.",
+  "actual": [
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "observation": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "reducedMotion": true,
+        "visibleItems": 10,
+        "focus": {
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(0, 95, 204)",
+          "insideViewport": true
+        },
+        "keyboardActivation": "Hello from paragraph 11!"
+      },
+      "pageErrors": []
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "observation": {
+        "viewport": {
+          "width": 1280,
+          "height": 900
+        },
+        "reducedMotion": true,
+        "visibleItems": 10,
+        "focus": {
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(0, 95, 204)",
+          "insideViewport": true
+        },
+        "keyboardActivation": "Hello from paragraph 11!"
+      },
+      "pageErrors": []
+    }
+  ],
+  "tools": {
+    "node": "v26.13.1",
+    "playwright": "1.65.1",
+    "chromium": "159.0.8154.6"
+  },
+  "localServer": "http://127.0.0.1:49863"
+}
