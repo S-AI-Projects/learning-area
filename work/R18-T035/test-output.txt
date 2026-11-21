@@ -1,0 +1,32 @@
+Local server: http://127.0.0.1:64095
+
+Pass 1 (first fresh browser context)…
+  [pass 1] screenshot → /Users/om3725/.gemini/antigravity/scratch/learning-area/work/R18-T035/pass-1.png
+  snapshot: {
+  h1Text: 'Hipster ipsum is the best',
+  h2Count: 2,
+  pCount: 5,
+  h1FontFamily: 'Lobster, cursive',
+  pFontFamily: 'Raleway, sans-serif',
+  scrollWidth: 1280,
+  clientWidth: 1280,
+  h1FontSize: 40,
+  bodyWidth: 800
+}
+
+Pass 2 (second fresh browser context)…
+  [pass 2] screenshot → /Users/om3725/.gemini/antigravity/scratch/learning-area/work/R18-T035/pass-2.png
+  snapshot: {
+  h1Text: 'Hipster ipsum is the best',
+  h2Count: 2,
+  pCount: 5,
+  h1FontFamily: 'Lobster, cursive',
+  pFontFamily: 'Raleway, sans-serif',
+  scrollWidth: 1280,
+  clientWidth: 1280,
+  h1FontSize: 40,
+  bodyWidth: 800
+}
+
+✅ All assertions passed — R18-T035 PASS
+EXIT:0
