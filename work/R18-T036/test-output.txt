@@ -1,0 +1,10 @@
+Local server: http://127.0.0.1:64189
+
+── Pass A: feature-present (native video support) ──────────────
+  ✅ feature-present assertions passed
+
+── Pass B: feature-absent (video type unsupported — stubbed) ───
+  ✅ feature-absent assertions passed
+
+✅ All assertions passed — R18-T036 PASS
+EXIT:0
