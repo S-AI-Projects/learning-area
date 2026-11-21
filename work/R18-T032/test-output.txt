@@ -1,0 +1,12 @@
+PASS: R18-T032 responsive layout check at 360x800
+  - No horizontal overflow (scrollWidth=360, clientWidth=360)
+  - Content fully inside viewport (x=8, right=352 <= 360)
+  - Teaching content intact: "This is my page"
+  - Zero browser and server errors
+PASS: R18-T032 responsive layout check at 1280x800
+  - No horizontal overflow (scrollWidth=1280, clientWidth=1280)
+  - Content fully inside viewport (x=8, right=1272 <= 1280)
+  - Teaching content intact: "This is my page"
+  - Zero browser and server errors
+PASS: R18-T032 All responsive layout checks passed at 360x800 and 1280x800
+Exit code: 0

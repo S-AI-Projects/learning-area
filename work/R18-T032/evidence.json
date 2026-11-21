@@ -1,0 +1,97 @@
+{
+  "task": "R18-T032",
+  "input": {
+    "target": "/html/introduction-to-html/getting-started/index.html",
+    "viewports": [
+      {
+        "width": 360,
+        "height": 800,
+        "name": "mobile"
+      },
+      {
+        "width": 1280,
+        "height": 800,
+        "name": "desktop"
+      }
+    ],
+    "testedRegions": [
+      "document",
+      "body",
+      "p"
+    ]
+  },
+  "expected": {
+    "pageTitle": "My test page",
+    "textContent": "This is my page",
+    "horizontalOverflow": false,
+    "contentClipped": false,
+    "contentOrderPreserved": true,
+    "serverErrors": 0,
+    "browserErrors": 0,
+    "positiveTabindex": 0
+  },
+  "actual": [
+    {
+      "viewport": "360x800",
+      "title": "My test page",
+      "text": "This is my page",
+      "contentOrder": [
+        "p"
+      ],
+      "horizontalOverflow": false,
+      "docScrollWidth": 360,
+      "docClientWidth": 360,
+      "contentBounds": {
+        "x": 8,
+        "y": 16,
+        "width": 344,
+        "height": 18,
+        "right": 352,
+        "bottom": 34
+      },
+      "contentWithinViewport": true,
+      "scrollRegions": [],
+      "positiveTabindex": 0,
+      "browserErrors": [],
+      "serverErrors": [],
+      "screenshots": [
+        "work/R18-T032/baseline-360x800.png",
+        "work/R18-T032/changed-360x800.png"
+      ]
+    },
+    {
+      "viewport": "1280x800",
+      "title": "My test page",
+      "text": "This is my page",
+      "contentOrder": [
+        "p"
+      ],
+      "horizontalOverflow": false,
+      "docScrollWidth": 1280,
+      "docClientWidth": 1280,
+      "contentBounds": {
+        "x": 8,
+        "y": 16,
+        "width": 1264,
+        "height": 18,
+        "right": 1272,
+        "bottom": 34
+      },
+      "contentWithinViewport": true,
+      "scrollRegions": [],
+      "positiveTabindex": 0,
+      "browserErrors": [],
+      "serverErrors": [],
+      "screenshots": [
+        "work/R18-T032/baseline-1280x800.png",
+        "work/R18-T032/changed-1280x800.png"
+      ]
+    }
+  ],
+  "tools": {
+    "node": "v26.13.1",
+    "playwright": "1.65.1",
+    "chromium": "159.0.8154.6"
+  },
+  "localServer": "http://127.0.0.1:63101"
+}
