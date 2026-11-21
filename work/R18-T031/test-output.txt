@@ -1,0 +1,10 @@
+PASS: R18-T031 keyboard accessibility check
+PASS: Static demo skip link present
+PASS: Tab traversal successfully focuses skip link
+PASS: Visible focus indicator inside viewport
+PASS: Enter activation navigates to #alice-container
+PASS: #alice-container receives focus
+PASS: CSS behavior and teaching structure preserved
+PASS: No positive tabindex values
+PASS: No server or browser errors
+Exit code: 0
