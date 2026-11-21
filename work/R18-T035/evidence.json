@@ -1,0 +1,37 @@
+{
+  "task": "R18-T035",
+  "page": "css/web-fonts/google-font.html",
+  "sourceAnchors": [
+    "body (main rendered content region)"
+  ],
+  "googleFontsStubbed": true,
+  "viewportLocked": {
+    "width": 1280,
+    "height": 800
+  },
+  "pass1": {
+    "h1Text": "Hipster ipsum is the best",
+    "h2Count": 2,
+    "pCount": 5,
+    "h1FontFamily": "Lobster, cursive",
+    "pFontFamily": "Raleway, sans-serif",
+    "scrollWidth": 1280,
+    "clientWidth": 1280,
+    "h1FontSize": 40,
+    "bodyWidth": 800
+  },
+  "pass2": {
+    "h1Text": "Hipster ipsum is the best",
+    "h2Count": 2,
+    "pCount": 5,
+    "h1FontFamily": "Lobster, cursive",
+    "pFontFamily": "Raleway, sans-serif",
+    "scrollWidth": 1280,
+    "clientWidth": 1280,
+    "h1FontSize": 40,
+    "bodyWidth": 800
+  },
+  "consistent": true,
+  "result": "PASS",
+  "timestamp": "2026-11-21T19:58:51.642Z"
+}
