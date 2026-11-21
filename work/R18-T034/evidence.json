@@ -1,0 +1,37 @@
+{
+  "task": "R18-T034",
+  "input": {
+    "target": "/javascript/apis/third-party-apis/youtube/index.html",
+    "sourceAnchor": "#search",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    }
+  },
+  "expected": {
+    "baselineSearchInput": true,
+    "repeatedInitNoDuplicateListeners": true,
+    "repeatedInteractionNoDuplicateDOM": true,
+    "isolatedHarnessDuplicatePrevention": true,
+    "repeatedStyleTogglesConsistent": true,
+    "cleanupLeavesNoActiveTimersOrListeners": true,
+    "serverErrors": 0,
+    "browserErrors": 0
+  },
+  "actual": {
+    "baselineSearchInput": true,
+    "repeatedInitNoDuplicateListeners": true,
+    "repeatedInteractionNoDuplicateDOM": true,
+    "isolatedHarnessDuplicatePrevention": true,
+    "repeatedStyleTogglesConsistent": true,
+    "cleanupLeavesNoActiveTimersOrListeners": true,
+    "serverErrors": 0,
+    "browserErrors": 0
+  },
+  "tools": {
+    "node": "v26.13.1",
+    "playwright": "1.65.1",
+    "chromium": "159.0.8154.6"
+  },
+  "localServer": "http://127.0.0.1:63801"
+}
