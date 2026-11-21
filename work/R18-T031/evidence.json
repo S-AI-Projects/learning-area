@@ -1,0 +1,64 @@
+{
+  "task": "R18-T031",
+  "input": {
+    "target": "/javascript/asynchronous/sequencing-animations/start/index.html",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "keyboardInteractions": [
+      "Tab",
+      "Enter"
+    ]
+  },
+  "expected": "All strict browser assertions pass, skip link is keyboard reachable with visible focus and activates cleanly to #alice-container, preserving demo CSS behavior, and no unexpected page or server errors occur.",
+  "actual": {
+    "teachingPreserved": {
+      "containerExists": true,
+      "imagesPreserved": [
+        "alice1",
+        "alice2",
+        "alice3"
+      ]
+    },
+    "cssPreserved": {
+      "bodyLayout": {
+        "display": "flex",
+        "justifyContent": "center",
+        "backgroundColor": "rgb(108, 55, 63)"
+      },
+      "containerLayout": {
+        "display": "grid",
+        "placeItems": "center",
+        "gridTemplateAreas": "\"a1 . .\" \". a2 .\" \". . a3\""
+      }
+    },
+    "skipLink": {
+      "href": "#alice-container",
+      "initialOffscreen": true,
+      "focusedOnTab": true,
+      "visibleFocus": {
+        "withinViewport": true,
+        "bounds": {
+          "x": 10,
+          "y": 10,
+          "right": 161.5625,
+          "bottom": 52
+        },
+        "outlineStyle": "solid",
+        "outlineWidth": "3px"
+      },
+      "keyboardActivatedOnEnter": true,
+      "targetFocused": true
+    },
+    "positiveTabindexes": 0,
+    "serverErrors": 0,
+    "browserErrors": 0
+  },
+  "tools": {
+    "node": "v26.13.1",
+    "playwright": "1.65.1",
+    "chromium": "159.0.8154.6"
+  },
+  "localServer": "http://127.0.0.1:61924"
+}
