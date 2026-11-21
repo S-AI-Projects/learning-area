@@ -1,0 +1,17 @@
+
+--- Scenario 1: Baseline Normal Media & Transcript ---
+
+--- Scenario 2: Failed Audio Asset Handling ---
+
+--- Scenario 3: Asset Recovery ---
+
+--- Scenario 4: Static Empty Result Fixture ---
+
+PASS: R18-T033 Audio transcript UI checks
+PASS: Baseline controls and transcript toggle verified
+PASS: Failed asset displays readable fallback banner with link
+PASS: Controls disable gracefully without throwing uncaught errors
+PASS: Asset restoration recovers player state cleanly
+PASS: Static empty result fixture displays readable fallback
+PASS: Zero page and server errors
+Exit code: 0

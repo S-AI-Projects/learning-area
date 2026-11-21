@@ -12,12 +12,53 @@ const player = document.querySelector('audio');
 
 player.removeAttribute('controls');
 
+const audioFallback = document.querySelector('.audio-fallback');
+const playerButtons = [playPauseBtn, stopBtn, rwdBtn, fwdBtn];
+
+function handleAudioError() {
+  if (audioFallback) {
+    audioFallback.style.display = 'block';
+  }
+  playerButtons.forEach(btn => {
+    if (btn) btn.disabled = true;
+  });
+}
+
+function handleAudioSuccess() {
+  if (audioFallback) {
+    audioFallback.style.display = 'none';
+  }
+  playerButtons.forEach(btn => {
+    if (btn) btn.disabled = false;
+  });
+}
+
+player.addEventListener('error', handleAudioError);
+const sources = player.querySelectorAll('source');
+sources.forEach(source => {
+  source.addEventListener('error', () => {
+    if (player.networkState === HTMLMediaElement.NETWORK_NO_SOURCE || player.error) {
+      handleAudioError();
+    }
+  });
+});
+
+player.addEventListener('canplay', handleAudioSuccess);
+player.addEventListener('loadeddata', handleAudioSuccess);
+
 // Define constructor for player controls object
 
 playPauseBtn.onclick = function() {
   if(player.paused) {
-    player.play();
-    playPauseBtn.textContent = 'Pause';
+    const playPromise = player.play();
+    if (playPromise !== undefined) {
+      playPromise.then(() => {
+        playPauseBtn.textContent = 'Pause';
+      }).catch(() => {
+        handleAudioError();
+        playPauseBtn.textContent = 'Play';
+      });
+    }
   } else {
     player.pause();
     playPauseBtn.textContent = 'Play';
@@ -61,7 +102,7 @@ player.ontimeupdate = function() {
     secondValue = seconds;
   }
 
-  mediaTime = minuteValue + ":" + secondValue;
+  let mediaTime = minuteValue + ":" + secondValue;
   timeLabel.textContent = mediaTime;
 };
 
@@ -74,6 +115,11 @@ transcriptBtn.onclick = function() {
   if(transcriptBtn.textContent === 'Show transcript') {
     transcript.style.height = '150px';
     transcriptBtn.textContent = 'Hide transcript';
+    const transcriptParagraphs = transcript.querySelectorAll('p:not(.empty-transcript)');
+    const emptyTranscript = transcript.querySelector('.empty-transcript');
+    if (transcriptParagraphs.length === 0 && emptyTranscript) {
+      emptyTranscript.style.display = 'block';
+    }
   } else {
     transcript.style.height = '0';
     transcriptBtn.textContent = 'Show transcript';
