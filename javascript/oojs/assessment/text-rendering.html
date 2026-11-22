@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Safe text rendering companion</title>
+    <style>
+      body {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        padding: 20px;
+        background: #111;
+        color: #eee;
+      }
+      label, input, button, #output {
+        display: block;
+        margin-top: 10px;
+      }
+      input {
+        width: 360px;
+        padding: 6px 10px;
+        font-size: 1rem;
+      }
+      button {
+        padding: 6px 14px;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+      #output {
+        padding: 12px;
+        background: #222;
+        border: 1px solid #444;
+        min-height: 24px;
+        word-break: break-all;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Safe text rendering companion</h1>
+      <p>Demonstrates safe text rendering using textContent for user/fixture text.</p>
+      <label for="user-text">Enter text or fixture string:</label>
+      <input id="user-text" type="text" placeholder="Type text or markup...">
+      <button id="show-text" type="button">Render text</button>
+      <div id="output" aria-live="polite"></div>
+    </main>
+
+    <script>
+      const input = document.querySelector('#user-text');
+      const button = document.querySelector('#show-text');
+      const output = document.querySelector('#output');
+
+      button.addEventListener('click', () => {
+        output.textContent = input.value;
+      });
+    </script>
+  </body>
+</html>
