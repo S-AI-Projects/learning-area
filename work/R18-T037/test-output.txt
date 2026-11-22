@@ -1,0 +1,16 @@
+Local server: http://127.0.0.1:49414
+
+── Pass 1: Rendered DOM & Computed Layout ────────────────────────
+  ✅ DOM structure and computed layout assertions passed
+
+── Pass 2: Label Focus Transfer Interaction ───────────────────
+  ✅ Label focus transfer to #say verified
+
+── Pass 3: Baseline Form Submission (Default Values) ───────────
+  ✅ Baseline submission intercepted: http://example.com/?say=Hi&to=Mom
+
+── Pass 4: Interactive Modification & Submission Walkthrough ──
+  ✅ Interactive submission verified: http://example.com/?say=Hello%2C+World%21&to=Alice
+
+✅ All assertions passed — R18-T037 PASS
+EXIT:0

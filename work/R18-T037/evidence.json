@@ -1,0 +1,44 @@
+{
+  "task": "R18-T037",
+  "page": "html/forms/sending-form-data/get-method.html",
+  "sourceAnchor": "#say",
+  "layout": {
+    "formAction": "http://example.com",
+    "formMethod": "get",
+    "formWidth": "420px",
+    "sayTagName": "INPUT",
+    "sayName": "say",
+    "sayInitialValue": "Hi",
+    "sayLabelText": "What greeting do you want to say?",
+    "toInitialValue": "Mom",
+    "btnText": "Send my greetings",
+    "labelStyles": {
+      "display": "inline-block",
+      "width": "240px",
+      "textAlign": "right",
+      "paddingRight": "10px"
+    },
+    "inputStyles": {
+      "cssFloat": "right"
+    }
+  },
+  "focusTransfer": {
+    "activeElementId": "say"
+  },
+  "baselineSubmission": {
+    "submittedUrl": "http://example.com/?say=Hi&to=Mom",
+    "method": "GET",
+    "paramSay": "Hi",
+    "paramTo": "Mom"
+  },
+  "interactiveSubmission": {
+    "updatedSayValue": "Hello, World!",
+    "updatedToValue": "Alice",
+    "submittedUrl": "http://example.com/?say=Hello%2C+World%21&to=Alice",
+    "method": "GET",
+    "paramSay": "Hello, World!",
+    "paramTo": "Alice"
+  },
+  "result": "PASS",
+  "timestamp": "2026-11-22T06:49:12.565Z"
+}

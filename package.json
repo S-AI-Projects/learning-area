@@ -1,0 +1,13 @@
+{
+  "name": "learning-area-tests",
+  "version": "1.0.0",
+  "description": "Playwright regression tests for MDN Learning Area",
+  "type": "module",
+  "scripts": {
+    "test": "node tests/course/r18-t037.mjs",
+    "check:r18-t037": "node tests/course/r18-t037.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.65.1"
+  }
+}
