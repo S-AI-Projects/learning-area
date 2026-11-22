@@ -1,0 +1,12 @@
+{
+  "name": "learning-area-task7",
+  "private": true,
+  "devDependencies": {
+    "playwright": "^1.65.1"
+  },
+  "scripts": {
+    "test": "node tests/course/r18-t057.mjs",
+    "test:course:r18-t057": "node tests/course/r18-t057.mjs"
+  }
+}
+

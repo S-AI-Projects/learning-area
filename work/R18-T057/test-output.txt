@@ -1,0 +1,11 @@
+
+> test
+> node tests/course/r18-t057.mjs
+
+PASS: Rendered DOM structure and computed CSS layout verified.
+PASS: Initial entry point and default Verse 1 fetch verified.
+PASS: Interactive walkthrough across Verse 2, Verse 3, and Verse 4 verified.
+PASS: Graceful error handling for missing resource verified.
+PASS: Zero unexpected page or console errors.
+PASS: Deliberate assertion mutation correctly triggers non-zero rejection.
+All automated checks in r18-t057.mjs passed successfully.
