@@ -1,0 +1,5 @@
+Node.js: v26.13.0
+NPM: 11.20.0
+Playwright: Version 1.65.1
+OS: Darwin
+Architecture: arm64

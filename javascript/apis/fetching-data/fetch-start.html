@@ -54,6 +54,37 @@
 
     <pre></pre>
 
-    <script></script>
+    <script>
+      const verseChoose = document.querySelector("#verse-choose");
+      const poemDisplay = document.querySelector("pre");
+
+      verseChoose.addEventListener("change", () => {
+        const verse = verseChoose.value;
+        updateDisplay(verse);
+      });
+
+      function updateDisplay(verse) {
+        verse = verse.replace(" ", "").toLowerCase();
+        const url = `${verse}.txt`;
+
+        fetch(url)
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error(`HTTP error: ${response.status}`);
+            }
+            return response.text();
+          })
+          .then((text) => {
+            poemDisplay.textContent = text;
+          })
+          .catch((error) => {
+            poemDisplay.textContent = `Could not fetch verse: ${error.message || error}`;
+          });
+      }
+
+      window.updateDisplay = updateDisplay;
+      updateDisplay("Verse 1");
+      verseChoose.value = "Verse 1";
+    </script>
   </body>
 </html>
