@@ -1,0 +1,42 @@
+{
+  "task": "R18-T038",
+  "page": "javascript/oojs/assessment/index.html",
+  "companionPage": "javascript/oojs/assessment/text-rendering.html",
+  "sourceAnchor": "canvas",
+  "payload": "<img src=x onerror=\"alert(1)\"><script>window.__injected=true</script>",
+  "mainPageResult": {
+    "canvasDims": {
+      "width": 1280,
+      "height": 800,
+      "clientWidth": 1280,
+      "clientHeight": 800
+    },
+    "initialText": "Ball count: 25",
+    "traceResult": {
+      "orig": "Ball count: 25",
+      "textAfter": "<img src=x onerror=\"alert(1)\"><script>window.__injected=true</script>",
+      "innerHTML": "&lt;img src=x onerror=\"alert(1)\"&gt;&lt;script&gt;window.__injected=true&lt;/script&gt;",
+      "imgCount": 0,
+      "scriptCount": 1,
+      "isInjected": false
+    },
+    "dialogCount": 0,
+    "pageErrors": []
+  },
+  "companionResult": {
+    "payload": "<img src=x onerror=\"alert(1)\"><script>window.__injected=true</script>",
+    "outputText": "<img src=x onerror=\"alert(1)\"><script>window.__injected=true</script>",
+    "outputImgCount": 0,
+    "dialogCount": 0,
+    "isInjected": false,
+    "layout": {
+      "display": "block",
+      "visible": true,
+      "width": 1224,
+      "height": 50
+    },
+    "pageErrors": []
+  },
+  "result": "PASS",
+  "timestamp": "2026-11-22T07:04:34.338Z"
+}

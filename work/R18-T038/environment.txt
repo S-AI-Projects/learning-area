@@ -1,0 +1,13 @@
+Task: R18-T038
+Page: javascript/oojs/assessment/index.html
+Companion: javascript/oojs/assessment/text-rendering.html
+Date: 2026-11-22
+
+Node.js: v26.13.1
+npm: 11.20.0
+Playwright: 1.65.1
+Chromium: 159.0.8154.6
+OS: macOS (darwin)
+
+Test command: node tests/course/r18-t038.mjs
+Exit code: 0 (PASS)
