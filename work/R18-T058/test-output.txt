@@ -1,0 +1,15 @@
+✓ Check 1: No unexpected console errors
+✓ Check 2: <audio> element present (1)
+✓ Check 3: <video> element present (1)
+✓ Check 4: Fallback <a> links render as plain text (2 links checked)
+✓ Check 5: Custom control buttons exist and have plain textContent (2 checked)
+✓ Check 6: Fixture string "Play" is plain text, no injected element
+✓ Check 7: Time label shows "00:00" as plain text, no injection
+✓ Check 8: Fixture string "Stop" is plain text, no injected element
+✓ Check 9: textContent is safe — no script execution from fixture text
+✓ Check 10: No unexpected page errors
+
+✅ All 10 checks passed for R18-T058
+Screenshots saved to work/R18-T058/
+
+Exit code: 0

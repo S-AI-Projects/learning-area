@@ -1,0 +1,8 @@
+Node.js: v26.13.0
+npm: 11.20.0
+Playwright: 1.65.1
+Chromium: bundled with Playwright 1.65.1
+OS: macOS (darwin)
+Date: 2026-11-23
+Test file: tests/course/r18-t058.mjs
+Target: accessibility/multimedia/custom-controls-OOJS/index.html
