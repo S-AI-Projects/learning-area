@@ -1,0 +1,13 @@
+Local server: http://127.0.0.1:49700
+
+── Pass A: Standard Motion (no-preference) ────────────────────
+  ✅ Standard motion transition duration verified: 0.4s
+
+── Pass B: Reduced Motion & Focus on mobile (390x844) ──
+  ✅ mobile reduced motion (0s) and visible focus verified
+
+── Pass B: Reduced Motion & Focus on desktop (1280x800) ──
+  ✅ desktop reduced motion (0s) and visible focus verified
+
+✅ All assertions passed — R18-T039 PASS
+EXIT:0
