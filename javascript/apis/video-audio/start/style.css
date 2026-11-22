@@ -47,7 +47,7 @@ button, .controls {
 }
 
 button:before {
-  font-family: HeydingsControlsRegular;
+  font-family: HeydingsControlsRegular, sans-serif;
   font-size: 20px;
   position: relative;
   content: attr(data-icon);
@@ -58,7 +58,6 @@ button:before {
 .play:before {
   font-size: 22px;
 }
-
 
 button, .timer {
   height: 38px;
@@ -118,4 +117,46 @@ button:active {
 
 .active:before {
   color: red;
+}
+
+/* Fallback & Error states */
+
+.media-error-msg {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #ffcc00;
+  border: 1px solid #ffcc00;
+  padding: 8px 12px;
+  font-family: sans-serif;
+  font-size: 14px;
+  border-radius: 6px;
+  z-index: 10;
+  text-align: center;
+}
+
+.media-error-msg p {
+  position: static;
+  margin: 0;
+  color: #ffcc00;
+}
+
+.media-error-msg a {
+  color: #66ccff;
+  text-decoration: underline;
+}
+
+.video-fallback {
+  padding: 10px;
+  color: white;
+  background: #333;
+  font-family: sans-serif;
+  font-size: 14px;
+  position: static;
+}
+
+.video-fallback a {
+  color: #66ccff;
 }
