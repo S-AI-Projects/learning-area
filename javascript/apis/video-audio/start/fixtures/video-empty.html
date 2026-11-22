@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en-gb">
+  <head>
+  	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<title>Video player — empty fixture</title>
+  	<link rel="stylesheet" type="text/css" href="../style.css">
+  </head>
+  <body>
+    <div class="player">
+      <div class="media-error-msg" role="alert">
+        <p>No video source specified. Please select a media file to begin.</p>
+      </div>
+      <video controls>
+        <!-- No source elements provided (empty fixture) -->
+        <p class="video-fallback">
+          No video available for playback.
+        </p>
+      </video>
+      <div class="controls">
+        <button class="play" data-icon="P" aria-label="play pause toggle" disabled></button>
+        <button class="stop" data-icon="S" aria-label="stop" disabled></button>
+        <div class="timer">
+          <div></div>
+          <span aria-label="timer">00:00</span>
+        </div>
+        <button class="rwd" data-icon="B" aria-label="rewind" disabled></button>
+        <button class="fwd" data-icon="F" aria-label="fast forward" disabled></button>
+      </div>
+    </div>
+    <p>Empty result fixture for automated regression testing.</p>
+    <script src="../custom-player.js"></script>
+  </body>
+</html>
+

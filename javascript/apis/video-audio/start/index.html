@@ -8,10 +8,16 @@
   </head>
   <body>
     <div class="player">
+      <div class="media-error-msg" role="alert" style="display: none;">
+        <p>Video failed to load. You can try the <a href="video/sintel-short.mp4">direct video link</a> instead.</p>
+      </div>
       <video controls>
         <source src="video/sintel-short.mp4" type="video/mp4" />
         <source src="video/sintel-short.webm" type="video/webm" />
-        <!-- fallback content here -->
+        <p class="video-fallback">
+          Your browser does not support HTML5 video, or the video failed to load.
+          You can access the <a href="video/sintel-short.mp4" download>direct video file</a> instead.
+        </p>
       </video>
       <div class="controls">
         <button class="play" data-icon="P" aria-label="play pause toggle"></button>
