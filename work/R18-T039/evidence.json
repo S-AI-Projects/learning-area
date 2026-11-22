@@ -1,0 +1,76 @@
+{
+  "task": "R18-T039",
+  "page": "/html/forms/toggle-switch-example/index.html",
+  "sourceAnchor": "#power",
+  "baselineMotion": {
+    "transitionDuration": "0.4s"
+  },
+  "testedWidths": {
+    "mobile": {
+      "viewport": {
+        "name": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "matchesReduced": true,
+      "transitionDuration": "0s",
+      "focusData": {
+        "isFocused": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineColor": "rgb(0, 95, 204)",
+        "outlineOffset": "2px",
+        "rect": {
+          "left": 59.25,
+          "right": 103.25,
+          "top": 19,
+          "bottom": 43,
+          "width": 44,
+          "height": 24
+        },
+        "insideViewport": true
+      },
+      "checkedAfterSpace": true,
+      "labelState": {
+        "onOpacity": "1",
+        "offOpacity": "0",
+        "backgroundColor": "rgb(255, 170, 0)"
+      },
+      "pageErrors": []
+    },
+    "desktop": {
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 800
+      },
+      "matchesReduced": true,
+      "transitionDuration": "0s",
+      "focusData": {
+        "isFocused": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "outlineColor": "rgb(0, 95, 204)",
+        "outlineOffset": "2px",
+        "rect": {
+          "left": 59.25,
+          "right": 103.25,
+          "top": 19,
+          "bottom": 43,
+          "width": 44,
+          "height": 24
+        },
+        "insideViewport": true
+      },
+      "checkedAfterSpace": true,
+      "labelState": {
+        "onOpacity": "1",
+        "offOpacity": "0",
+        "backgroundColor": "rgb(255, 170, 0)"
+      },
+      "pageErrors": []
+    }
+  },
+  "result": "PASS",
+  "timestamp": "2026-11-22T07:10:59.725Z"
+}
