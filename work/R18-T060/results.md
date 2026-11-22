@@ -1,0 +1,27 @@
+# R18-T060 — Results
+
+## Summary
+
+**All 10 checks passed.** Exit code: 0
+
+## Test Output
+
+```
+✓ Check 1: No unexpected console errors
+✓ Check 2: .container present with 2 .row children
+✓ Check 3: Row 1 has 12 "one column" cells
+✓ Check 4: Row 2 has 4 cells — 1+6+3+2 column spans (1+6+3+2 = 12)
+✓ Check 5: ".six.columns" rendered width = 48.00% of row (≈ 48%)
+✓ Check 6: ".three.columns" rendered width = 22.00% of row (≈ 22%)
+✓ Check 7: ".two.columns" rendered width = 13.33% of row (≈ 13.3%)
+✓ Check 8: ".one.column" has float:left (Skeleton float-grid is active)
+✓ Check 9: Deliberate break detected — without float, ".six.columns" spans 100.00% (≥90%); fixture correctly removed, layout restored
+✓ Check 10: No unexpected page errors
+
+✅ All 10 checks passed for R18-T060
+Screenshots saved to work/R18-T060/
+```
+
+## Conclusion
+
+The `css/css-layout/legacy/html-skeleton-finished.html` Skeleton grid demo renders correctly at desktop width. The deliberate-break fixture (injecting `float: none !important; width: 100% !important`) successfully collapses the grid, confirming the assertions can detect a layout regression. The fixture is fully removed — the final application contains no mutation.
