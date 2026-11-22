@@ -1,0 +1,13 @@
+Local server: http://127.0.0.1:49803
+
+── Pass 1: Correct Page Behavior (Baseline Verification) ───────
+  ✅ Correct page assertions and event interactions passed
+
+── Pass 2: Deliberate Event Binding Mutation Fixture ───────────
+  ✅ Deliberate event mutation correctly detected and distinguished
+
+── Pass 3: Deliberate Style Rule Mutation Fixture ─────────────
+  ✅ Deliberate style mutation correctly detected and distinguished
+
+✅ All assertions passed — R18-T040 PASS
+EXIT:0
