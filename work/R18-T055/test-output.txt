@@ -1,0 +1,9 @@
+
+> test
+> node tests/course/r18-t055.mjs
+
+PASS: Context 1 verified (img and a anchors, DOM structure, offline isolation).
+PASS: Context 2 verified (img and a anchors, DOM structure, offline isolation).
+PASS: Two fresh browser contexts produced identical asserted DOM and layout state.
+PASS: Deliberate state mutation correctly triggers assertion rejection.
+All automated checks in r18-t055.mjs passed successfully.
