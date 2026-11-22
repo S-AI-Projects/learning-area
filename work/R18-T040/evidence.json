@@ -1,0 +1,38 @@
+{
+  "task": "R18-T040",
+  "page": "/accessibility/multimedia/custom-controls-OOJS/index.html",
+  "sourceAnchors": [
+    "audio",
+    "a",
+    "video"
+  ],
+  "correctBehavior": {
+    "playerLayout": {
+      "width": "480px",
+      "display": "block"
+    },
+    "controlsLayout": {
+      "height": "36px",
+      "width": "478px"
+    },
+    "initialPlayText": "Play",
+    "textAfterPlay": "Pause",
+    "textAfterStop": "Play",
+    "videoTimeAfterStop": 0
+  },
+  "deliberateEventMutation": {
+    "mutationType": "event_binding_broken",
+    "textAfterClick": "Play",
+    "isVideoPaused": true,
+    "isBrokenDetected": true
+  },
+  "deliberateStyleMutation": {
+    "mutationType": "style_rule_broken",
+    "isVisible": false,
+    "height": "0px",
+    "isStyleBrokenDetected": true
+  },
+  "filesPristine": true,
+  "result": "PASS",
+  "timestamp": "2026-11-22T07:18:14.977Z"
+}
