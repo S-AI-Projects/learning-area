@@ -1,0 +1,8 @@
+
+> test
+> node tests/course/r18-t056.mjs
+
+PASS: Feature-present path verified (table styling active, fallback hidden, zero errors).
+PASS: Feature-absent path verified (explicit fallback notice displayed, table preserved).
+PASS: Deliberate assertion mutation correctly triggers rejection.
+All automated checks in r18-t056.mjs passed successfully.

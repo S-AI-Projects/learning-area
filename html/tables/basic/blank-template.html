@@ -9,6 +9,32 @@
   <body>
     <h1>Table template</h1>
 
+    <main id="main-content" class="main-rendered-region">
+      <div id="table-fallback" class="table-fallback" role="status" hidden>
+        <p>Notice: Your browser does not support advanced CSS table styling features. Standard fallback layout is active.</p>
+      </div>
 
+      <table id="template-table">
+        <caption>Sample table template</caption>
+        <thead>
+          <tr>
+            <th scope="col">Header A</th>
+            <th scope="col">Header B</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Data A1</td>
+            <td>Data B1</td>
+          </tr>
+          <tr>
+            <td>Data A2</td>
+            <td>Data B2</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+    <script src="table-feature-check.js" defer></script>
   </body>
 </html>
